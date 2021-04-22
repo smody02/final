@@ -27,10 +27,11 @@
 					// Step 5: wait for done + success
 					console.log("5 - response received");
 					result = request.responseText;
-					document.getElementById("data").innerHTML = result;
+					//document.getElementById("data").innerHTML = result;
 					quote = JSON.parse(result);
+					var qotd = quote.q;
 
-					document.getElementById("data").innerHTML = quote["q"];
+					document.getElementById("data").innerHTML = qotd;
 
 				}
 				else if (request.readyState == 4 && request.status != 200) {
