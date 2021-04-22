@@ -6,7 +6,7 @@
 	<link rel='stylesheet' type="text/css" href="style.css" />
 
 	<script>
-		function getCat() {
+		function getFact() {
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
@@ -14,7 +14,7 @@
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
 
-		request.open("GET", "https://catfact.ninja/fact", true)
+		request.open("GET", "https://zenquotes.io/api/today", true)
 
 			console.log("2 - opened request file");
 
@@ -54,11 +54,10 @@
 </head>
 
 
-<body onload="getCat()">
+<body onload="getFact()">
 
 	<h1>My Calendar</h1>
 	<div class="text">
-		Random Cat Fact:
 	<div id="data">
 		Loading...
 	</div>
