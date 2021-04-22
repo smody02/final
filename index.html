@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cat Fact API</title>
+	<meta charset="utf-8"/>
+	<link rel='stylesheet' type="text/css" href="style.css" />
+	<script>
+		function getCat() {
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+			request = new XMLHttpRequest();
+			console.log("1 - request object created");
+
+			// Step 2: Set the URL for the AJAX request to be the JSON file
+
+		request.open("GET", "https://catfact.ninja/fact", true)
+
+			console.log("2 - opened request file");
+
+			// Step 3: set up event handler/callback
+
+			request.onreadystatechange = function() {
+
+				if (request.readyState == 4 && request.status == 200) {
+
+					// Step 5: wait for done + success
+					console.log("5 - response received");
+					result = request.responseText;
+					document.getElementById("data").innerHTML = result;
+					fact = JSON.parse(result);
+
+					document.getElementById("data").innerHTML =fact["fact"];
+
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+
+					document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
+
+				}
+
+				else if (request.readyState == 3) {
+
+					document.getElementById("data").innerHTML = "Too soon!  Try again";
+
+				}
+
+			}
+		// Step 4: fire off the HTTP request
+			request.send();
+			console.log("4 - Request sent");
+		}
+	</script>
+</head>
+
+
+<body onload="getCat()">
+
+	<h1> =^.^= Cat Facts =^.^= </h1>
+	<div class="text">
+		Random Cat Fact:
+	<div id="data">
+		Loading...
+	</div>
+</div>
+<br> <br>
+
+ <div class="questions" >
+
+	 <div class="title">
+Describe the API you selected and what it does:
+</div>
+This API gives either random cat breeds or random cat facts. The user is able to
+call the API and parse the information they want.
+<br><br>
+
+ <div class="title">
+Cite the website where you found it:
+</div>
+https://catfact.ninja/
+<br><br>
+
+ <div class="title">
+Describe the options you used for the API request:
+</div>
+In order to get the information I needed, I accessed the [fact] part of the API.
+This let me isolate just one fact and be able to print it out in a clean way.
+
+<br><br>
+
+ <div class="title">
+Give two applications where this API would be helpful:
+</div>
+This would primarily be helpful for my mother who loves cats.
+ She would be able to reload the page and constantly learn new
+information about cats. This could also be useful at a vet as something
+for people to look at in the waiting room.
+
+</div>
+
+</body>
+</html>
