@@ -1,21 +1,21 @@
 body,html {
 		font-size: 18px;
 		font-family: Tahoma;
-		background-color: #FFFCE7 ;
-    color: #FFDFD3;
+		background-color: #fcecdd ;
+    color: #fea82f;
     margin-bottom: 30px;
 	}
 
 h1 {
   font-size: 48px;
   text-align: center;
-  background-color: #DACBFE ;
+  background-color: #ffc288 ;
   background-size:cover;
   height:15%;
   width:100%;
   padding:35px;
   box-sizing:border-box;
-  color: #FFFCE7;
+  color: #02475e;
   font-family: Tahoma;
 }
 
@@ -27,20 +27,20 @@ h1 {
 	width:100%;
 	padding:35px;
 	box-sizing:border-box;
-	color: #957DAD;
+	color: #02475e;
 	font-family: Tahoma;
 }
 
 .questions {
   font-size: 16px;
   text-align: left;
-  background-color: #CAEEFE ;
+  background-color: #ff6701 ;
   background-size:cover;
   height:15%;
   width:100%;
   padding:35px;
   box-sizing:border-box;
-  color: #957DAD;
+  color: #02475e;
   font-family: Tahoma;
 }
 
@@ -49,6 +49,6 @@ h1 {
 }
 
 
-#calendar {
+.calendar-body {
 	text-align: center;
 }
