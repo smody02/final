@@ -172,7 +172,57 @@
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
+<form id = "form">
+	<p id = "name"> Event Name: <input type="text"> </p>
+	<p>
+		<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day  
+		<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
+	</p>
+	<p id = "start" style = "visibility: hidden;">Start Time: <input type="text"  name="start" /></p>
+	<p id = "end" style = "visibility: hidden;">End Time: <input type="text"  name="end" /></p>
+	<p id = "location">Location <input type="text"></p>
+	Desription: <br><br><textarea id="description" rows="4" cols="50"> </textarea><br><br>
+	<button onclick="return validate()">Enter</button>
+	<!-- Time:
+	<select id="time">
+		<option>5:00PM</option>
+		<option>5:30PM</option>
+		<option>6:00PM</option>
+		<option>6:30PM</option>
+		<option>7:00PM</option>
+		<option>7:30PM</option>
+		<option>8:00PM</option>
+		<option>8:30PM</option>
+		<option>9:00PM</option>
+		<option>9:30PM</option>
+		<option>10:00PM</option>
+	</select><br><br>
+	Group Size:
+	<select id="size">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option><option>9</option>
+		<option>10+</option>
+	</select><br><br> -->
+</form>
 
+<script language="javascript">
+	function setVisibility() {
+		if (document.getElementById("specified_time").checked) {
+			document.getElementById("start").style.visibility = "visible";
+			document.getElementById("end").style.visibility = "visible";
+		}
+		else {
+			document.getElementById("start").style.visibility = "hidden";
+			document.getElementById("end").style.visibility = "hidden";
+		}
+	}
+</script>
 
 </h1>
 </body>
