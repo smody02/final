@@ -6,7 +6,7 @@
 	<link rel='stylesheet' type="text/css" href="style.css" />
 
 	<script>
-		function getFact() {
+		function getQuote() {
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
@@ -28,9 +28,9 @@
 					console.log("5 - response received");
 					result = request.responseText;
 					document.getElementById("data").innerHTML = result;
-					fact = JSON.parse(result);
+					quote = JSON.parse(result);
 
-					document.getElementById("data").innerHTML =fact["fact"];
+					document.getElementById("data").innerHTML = quote["q"];
 
 				}
 				else if (request.readyState == 4 && request.status != 200) {
@@ -54,7 +54,7 @@
 </head>
 
 
-<body onload="getFact()">
+<body onload="getQuote()">
 
 	<h1>My Calendar</h1>
 	<div class="text">
