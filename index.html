@@ -96,7 +96,6 @@
         </div>
         <br/>
         <form class="form-inline">
-            <label class="lead mr-2 ml-2" for="month">Jump To: </label>
             <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
                 <option value=0>Jan</option>
                 <option value=1>Feb</option>
@@ -155,7 +154,8 @@
             <option value=2028>2028</option>
             <option value=2029>2029</option>
             <option value=2030>2030</option>
-        </select></form>
+        </select>
+			</form>
     </div>
 </div>
 <!--<button name="jump" onclick="jump()">Go</button>-->
@@ -176,7 +176,7 @@
 <form id = "form">
 	<p id = "name"> Event Name: <input type="text"> </p>
 	<p>
-		<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day  
+		<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
 		<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
 	</p>
 	<p id = "start" style = "visibility: hidden;">Start Time: <input type="text"  name="start" /></p>

@@ -22,12 +22,6 @@ function previous() {
     showCalendar(currentMonth, currentYear);
 }
 
-function jump() {
-    currentYear = parseInt(selectYear.value);
-    currentMonth = parseInt(selectMonth.value);
-    showCalendar(currentMonth, currentYear);
-}
-
 function showCalendar(month, year) {
 
     let firstDay = (new Date(year, month)).getDay();
@@ -63,7 +57,7 @@ function showCalendar(month, year) {
 
             else {
                 let cell = document.createElement("td");
-                let cellText = document.createTextNode(date);
+                let cellText = document.createTextNode(date + "<br>" + " hi" );
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                     cell.classList.add("bg-info");
                 } // color today's date
