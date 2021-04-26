@@ -9,10 +9,8 @@ body,html {
   box-sizing: border-box;
 }
 
-h1 {
 
-}
-
+/* inspirational quote section   */
 .text {
 	font-size: 20px;
 	text-align: center;
@@ -25,18 +23,21 @@ h1 {
 
 
 
-
-.plsCenter {
+/* continder fot the calendar */
+div#plsCenter {
 	position:relative;
-
+	border: 2px solid #e4edb7;
 }
-
+/* the month adn year of the calendar */
 div#monthAndYear.card-header{
-	font-size: 24px;
-	padding-top: 20px;
+	background-color: #e4edb7;
+	font-size: 30px;
+	margin-top: 20px;
 	font-weight: bolder;
+	text-align: center;
 }
 
+/* the actual calendar itself */
 #calendar.table{
   top: 50%;
   width: 50%;
@@ -45,6 +46,28 @@ div#monthAndYear.card-header{
   text-align: center;
 	font-size: 24px;
 }
+/* button styling  */
+
+button{
+  color: #909b55;
+	background-color: #f9faff;
+  border: none;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 70px;
+  margin: 0 auto;
+}
+
+button:hover{
+	background-color: #909b55;
+  border: none;
+  color: #fbfdfe;
+
+}
+
 
 div.form-inline{
   top: 50%;
@@ -70,6 +93,8 @@ div.form-inline{
 	border-radius: 50%;
 	background: #383D36;
 }
+
+/* button formatting */
 a:link, a:visited {
 	position: relative;
 	font-size: 18px;
@@ -87,39 +112,47 @@ a:hover, a:active {
   color: #19252d;
 }
 
+/* hostd the colemsn */
 .column {
   float: left;
   padding: 10px;
 	/* margin: 35px; */
 }
 
+/* calendar section */
 .left {
   width: 70%;
 	outline-color: #19252d;
 
 
 }
-
+/* upcoming event, add event, adn events of the day sections */
 .right {
   width: 29%;
 }
+
+/* upcoming event section  */
 .uE{
 	text-align: center;
-  border: 2px dashed black;
+  border: 2px solid #384267;
 	padding-bottom: 10px;
 }
 
+/* add event button section */
 .aE{
 	margin-top: 20px;
 	text-align: center;
-  border: 2px dashed blue;
+  border: 2px solid #19252D;
 }
-
+/* //events of the day section */
 .listedEvents{
 	margin-top: 20px;
-	border: 2px dashed red;
+	padding-top: 10px;
+	padding-left: 10px;
+	border: 2px solid #b66292;
+	height: 157px;
 }
-
+/* title: calm and collected calendar */
 .lef {
   width: 70%;
 	outline-color: #19252d;
@@ -132,6 +165,7 @@ a:hover, a:active {
 	padding-bottom: 50px;
 }
 
+/* welcome, ____! and logout button  */
 .righ {
   width: 29%;
 	outline-color: #19252d;
