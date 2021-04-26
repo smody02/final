@@ -1,54 +1,88 @@
 body,html {
 		font-size: 18px;
 		font-family: Tahoma;
-		background-color: #fcecdd ;
-    color: #fea82f;
+		background-color: #FFF9F7 ;
+    color: #574843;
     margin-bottom: 30px;
 	}
+	* {
+  box-sizing: border-box;
+}
 
 h1 {
   font-size: 48px;
-  text-align: center;
-  background-color: #ffc288 ;
-  background-size:cover;
+  text-align: left;;
   height:15%;
   width:100%;
   padding:35px;
   box-sizing:border-box;
-  color: #02475e;
+  color: #574843;
   font-family: Tahoma;
 }
 
 .text {
-	font-size: 36px;
+	font-size: 20px;
 	text-align: center;
-	background-size:cover;
+	background-color: #DFC9C1;
 	height:15%;
-	width:100%;
-	padding:35px;
+	padding: 5px;
 	box-sizing:border-box;
-	color: #02475e;
 	font-family: Tahoma;
 }
 
-.questions {
-  font-size: 16px;
-  text-align: left;
-  background-color: #ff6701 ;
-  background-size:cover;
-  height:15%;
-  width:100%;
-  padding:35px;
-  box-sizing:border-box;
-  color: #02475e;
-  font-family: Tahoma;
-}
 
-.title{
-	font-weight: bolder;
-}
 
 
 .calendar-body {
 	text-align: center;
+}
+
+#all_day{
+	top: 20px;
+	left: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: white;
+}
+
+#specified_time{
+	top: 20px;
+	left: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: white;
+}
+a:link, a:visited {
+	position: relative;
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 70%;
+	outline-color: #574843;
+	padding: 35px;
+
+}
+
+.right {
+  width: 29%;
 }

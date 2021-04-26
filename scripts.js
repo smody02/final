@@ -56,8 +56,10 @@ function showCalendar(month, year) {
             }
 
             else {
+                // var inputText = document.getElementById("myInput").value;
                 let cell = document.createElement("td");
-                let cellText = document.createTextNode(date + "<br>" + " hi" );
+                let cellText = document.createTextNode(date);
+
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                     cell.classList.add("bg-info");
                 } // color today's date
