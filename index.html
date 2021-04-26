@@ -10,11 +10,14 @@
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
+			if(!request){
+				alert("Unable to retrieve quote.");
+			}
 			console.log("1 - request object created");
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
 
-		request.open("GET", "https://zenquotes.io/api/today", true)
+		request.open("GET", "http://quotes.rest/qod.json", true)
 
 			console.log("2 - opened request file");
 
@@ -26,17 +29,20 @@
 
 					// Step 5: wait for done + success
 					console.log("5 - response received");
-					result = request.responseText;
+					result = this.responseText;
 					//document.getElementById("data").innerHTML = result;
-					quote = JSON.parse(result);
-					var qotd = quote.q;
+					info = JSON.parse(result);
+					alert("info is " + info.contents.quotes.quote);
+					alert(JSON.stringify(result));
+					alert(info);
+					var qotd = info.contents.quotes.quote;
 
 					document.getElementById("data").innerHTML = qotd;
 
 				}
 				else if (request.readyState == 4 && request.status != 200) {
 
-					document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
+					document.getElementById("data").innerHTML = "Why do something tomorrow when you could do it today?";
 
 				}
 
