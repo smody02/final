@@ -176,3 +176,15 @@ a:hover, a:active {
 	padding-top: 35px;
 	padding-bottom: 50px;
 }
+
+.columnForm{
+	width: 70%;
+	outline-color: #19252d;
+	font-size: 48px;
+  text-align: left;
+	color: #19252d;
+	font-family: Tahoma;
+	font-weight: bolder;
+	padding-top: 35px;
+	padding-bottom: 50px;
+}
