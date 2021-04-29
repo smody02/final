@@ -1,6 +1,6 @@
 body,html {
 		font-size: 18px;
-		font-family: Tahoma;
+		font-family: "Helvetica Neue", "Arial", sans-serif;
 		background-color: #f9faff ;
     color: #19252d;
     margin-bottom: 30px;
@@ -13,13 +13,13 @@ body,html {
 /* inspirational quote section   */
 .text {
 	font-size: 20px;
-	text-align: left;
+	text-align: center;
 	background-color: #becfda;
 	height:15%;
 	padding: 20px;
 	box-sizing:border-box;
-	font-family: Tahoma;
 	margin-top: 10px;
+	font-weight: bolder;
 }
 
 
@@ -36,6 +36,10 @@ div#monthAndYear.card-header{
 	margin-top: 20px;
 	font-weight: bolder;
 	text-align: center;
+}
+
+div.card{
+	background-color: #ffffff;
 }
 
 /* the actual calendar itself */
@@ -160,7 +164,6 @@ a:hover, a:active {
 	font-size: 48px;
   text-align: left;
 	color: #19252d;
-	font-family: Tahoma;
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
@@ -174,7 +177,6 @@ a:hover, a:active {
 	font-size: 24px;
   text-align: right;
 	color: #19252d;
-	font-family: Tahoma;
 	padding-top: 35px;
 	padding-bottom: 50px;
 }
@@ -185,7 +187,6 @@ a:hover, a:active {
 	font-size: 48px;
   text-align: left;
 	color: #19252d;
-	font-family: Tahoma;
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
@@ -203,6 +204,24 @@ a:hover, a:active {
 	font-size: 24px;
 	text-align: right;
 	color: #19252d;
-	font-family: Tahoma;
 	padding-top: 35px;
+}
+
+th {
+  border: 2px solid #e4edb7;
+  text-align: left;
+  padding: 5px;
+}
+
+td{
+  border: 2px solid #e4edb7;
+  text-align: left;
+  padding: 5px;
+	height: 500px;
+	width: 14%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
 }

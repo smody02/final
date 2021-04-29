@@ -95,24 +95,32 @@
         <div class="card-header" id="monthAndYear"> ToDo </div>
 				<div id="plsCenter">
         <table class="table" id="calendar">
-            <thead>
             <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
+                <th id = "day0"  > Today </th>
+                <th id = "day1"  > Tomorrow </th>
+                <th id = "day2"  > PH</th>
+                <th id = "day3"  > PH </th>
+                <th id = "day4"  > PH </th>
+                <th id = "day5"  > PH </th>
+                <th id = "day6"  > PH </th>
             </tr>
-            </thead>
+						<tr>
+							<td id = event0 > -Walk the dog: 7:30 </td>
+							<td id = event1 > omggggggg </td>
+							<td id = event2 > omggggggg </td>
+							<td id = event3 > omggggggg </td>
+							<td id = event4 > omggggggg </td>
+							<td id = event5 > ojsbdf alsdfbgggg </td>
+							<td id = event6 > omggggggg </td>
+						</tr>
+					</table>
 
             <tbody id="calendar-body">
 
             </tbody>
         </table>
 
-
+<!--
         <div class="form-inline">
 
             <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
@@ -181,7 +189,7 @@
             <option value=2029>2029</option>
             <option value=2030>2030</option>
         </select>
-			</form>
+			</form> -->
 
 
     </div>
@@ -207,7 +215,6 @@
 
 
 			<div class="eventForm">
-		<a id="event" > Add Event </a>
 		<form id = "form">
 			<p id = "name"> Event Name: <input type="text"> </p>
 			<p>
