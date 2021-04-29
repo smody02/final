@@ -13,12 +13,13 @@ body,html {
 /* inspirational quote section   */
 .text {
 	font-size: 20px;
-	text-align: center;
+	text-align: left;
 	background-color: #becfda;
 	height:15%;
-	padding: 5px;
+	padding: 20px;
 	box-sizing:border-box;
 	font-family: Tahoma;
+	margin-top: 10px;
 }
 
 
@@ -121,14 +122,14 @@ a:hover, a:active {
 
 /* calendar section */
 .left {
-  width: 70%;
+  width: 49%;
 	outline-color: #19252d;
 
 
 }
 /* upcoming event, add event, adn events of the day sections */
 .right {
-  width: 29%;
+  width: 50%;
 }
 
 /* upcoming event section  */
@@ -163,6 +164,7 @@ a:hover, a:active {
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 /* welcome, ____! and logout button  */
@@ -187,4 +189,20 @@ a:hover, a:active {
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
+}
+
+.row{
+	position: relative;
+	height: 100%;
+	/* margin-top: 10px; */
+	padding-bottom: 10px;
+}
+
+.roww{
+	outline-color: #19252d;
+	font-size: 24px;
+	text-align: right;
+	color: #19252d;
+	font-family: Tahoma;
+	padding-top: 35px;
 }
