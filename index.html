@@ -4,7 +4,15 @@
 	<title>ToDo</title>
 	<meta charset="utf-8"/>
 	<link rel='stylesheet' type="text/css" href="style.css" />
+	<style type="text/css">
+	body {
+		background-image: url('background.jpg');
+		background-attachment: fixed;
+		background-size: 100%;
+		position: relative;
+	}
 
+	</style>
 	<script>
 		function getQuote() {
 			/* Step 1: Make instance of request object...
@@ -92,8 +100,8 @@
 
 
 
-        <div class="card-header" id="monthAndYear"> ToDo </div>
-				<div id="plsCenter">
+        <div class="card-header" id="monthAndYear"> TO DO: </div>
+				<!-- <div id="plsCenter"> -->
         <table class="table" id="calendar">
             <tr>
                 <th id = "day0"  > Today </th>
@@ -212,10 +220,11 @@
 
 	<div class="row">
 	<div class="column left" >
-
+		<div id= "plsCenter"> ADD EVENT </div>
 
 			<div class="eventForm">
 		<form id = "form">
+			<div class="listedForm">
 			<p id = "name"> Event Name: <input type="text"> </p>
 			<p>
 				<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
@@ -258,20 +267,18 @@
 			</select><br><br> -->
 		</form>
 		</div>
+	</div>
 		</div>
 
 <div class="column right" >
-	<div class="uE" >
-		<div style="font-weight:bold;">
-		UPCOMING EVENT:
-	</div>
-		<br>
-		7:00-8:00: Meeting
-	</div>
-	<div class="aE" >
+	<!-- <div class="uE" > -->
+		<div id= "plsCenterGreen"> UPCOMING EVENTS </div>
+
+	<!-- </div> -->
+	<!-- <div class="aE" >
 		Add New Event
 	<a href="#event">&#43;</a>
-</div>
+</div> -->
 <div class="listedEvents">
 	1:30-2:30: Hair Appointment
 	<br><br>
