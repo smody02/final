@@ -104,6 +104,7 @@
 				<!-- <div id="plsCenter"> -->
         <table class="table" id="calendar">
             <tr>
+							<!-- where to add the ndays of the week -->
                 <th id = "day0"  > Today </th>
                 <th id = "day1"  > Tomorrow </th>
                 <th id = "day2"  > PH</th>
@@ -113,13 +114,14 @@
                 <th id = "day6"  > PH </th>
             </tr>
 						<tr>
-							<td id = event0 > -Walk the dog: 7:30 </td>
-							<td id = event1 > omggggggg </td>
-							<td id = event2 > omggggggg </td>
-							<td id = event3 > omggggggg </td>
-							<td id = event4 > omggggggg </td>
-							<td id = event5 > ojsbdf alsdfbgggg </td>
-							<td id = event6 > omggggggg </td>
+							<!-- where to add the info from the data base -->
+							<td id = "event0" > -Walk the dog: 7:30 </td>
+							<td id = "event1" > omggggggg </td>
+							<td id = "event2" > omggggggg </td>
+							<td id = "event3" > omggggggg </td>
+							<td id = "event4" > omggggggg </td>
+							<td id = "event5" > ojsbdf alsdfbgggg </td>
+							<td id = "event6" > omggggggg </td>
 						</tr>
 					</table>
 
@@ -226,6 +228,7 @@
 		<form id = "form">
 			<div class="listedForm">
 			<p id = "name"> Event Name: <input type="text"> </p>
+			<p id = "name"> Date: <input type="text"> </p>
 			<p>
 				<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
 				<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
@@ -279,7 +282,8 @@
 		Add New Event
 	<a href="#event">&#43;</a>
 </div> -->
-<div class="listedEvents">
+<!-- where to add the upcoming events -->
+<div id="listedEvents">
 	1:30-2:30: Hair Appointment
 	<br><br>
 	6:30-8:30: Dinner with Jeremy

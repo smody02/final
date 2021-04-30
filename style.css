@@ -175,7 +175,7 @@ a:hover, a:active {
   border: 2px solid #19252D;
 }
 /* //events of the day section */
-.listedEvents{
+#listedEvents{
 	/* margin-top: 20px; */
 	padding-top: 10px;
 	padding-left: 10px;
