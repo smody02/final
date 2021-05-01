@@ -220,6 +220,7 @@
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
+<<<<<<< Updated upstream
 	<div class="row">
 	<div class="column left" >
 		<div id= "plsCenter"> ADD EVENT </div>
@@ -291,6 +292,113 @@
 </div>
 </div>
 
+=======
+<form id = "form">
+	<p id = "name"> Event Name: <input type="text"> </p>
+	<p>
+		<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
+		<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
+	</p>
+	<p id = "start" style = "visibility: hidden; font-size: 30px;">Start Time:<br>
+		<span style = "font-size: 16px;">Hour:</span><select>
+			<option>12:00</option>
+			<option>1:00</option>
+			<option>2:00</option>
+			<option>3:00</option>
+			<option>4:00</option>
+			<option>5:00</option>
+			<option>6:00</option>
+			<option>7:00</option>
+			<option>8:00</option>
+			<option>9:00</option>
+			<option>10:00</option>
+			<option>11:00</option>
+		</select>
+		<span style = "font-size: 16px;">Minute:</span><select>
+			<option>00</option>
+			<option>05</option>
+			<option>10</option>
+			<option>15</option>
+			<option>20</option>
+			<option>25</option>
+			<option>30</option>
+			<option>35</option>
+			<option>40</option>
+			<option>45</option>
+			<option>50</option>
+			<option>55</option>
+		</select>
+		<span style = "font-size: 16px;">AM/PM:</span><select>
+			<option>AM</option>
+			<option>PM</option>
+		</select>
+	</p>
+	<p id = "end" style = "visibility: hidden; font-size: 30px;">End Time:<br>
+		<span style = "font-size: 16px;">Hour:</span><select>
+			<option>12:00</option>
+			<option>1:00</option>
+			<option>2:00</option>
+			<option>3:00</option>
+			<option>4:00</option>
+			<option>5:00</option>
+			<option>6:00</option>
+			<option>7:00</option>
+			<option>8:00</option>
+			<option>9:00</option>
+			<option>10:00</option>
+			<option>11:00</option>
+		</select>
+		<span style = "font-size: 16px;">Minute:</span><select>
+			<option>00</option>
+			<option>05</option>
+			<option>10</option>
+			<option>15</option>
+			<option>20</option>
+			<option>25</option>
+			<option>30</option>
+			<option>35</option>
+			<option>40</option>
+			<option>45</option>
+			<option>50</option>
+			<option>55</option>
+		</select>
+		<span style = "font-size: 16px;">AM/PM:</span><select>
+			<option>AM</option>
+			<option>PM</option>
+		</select>
+	</p>
+	
+	<p id = "location">Location <input type="text"></p>
+	Desription: <br><br><textarea id="description" rows="4" cols="50"> </textarea><br><br>
+	<button onclick="return validate()">Enter</button>
+	<!-- Time:
+	<select id="time">
+		<option>5:00PM</option>
+		<option>5:30PM</option>
+		<option>6:00PM</option>
+		<option>6:30PM</option>
+		<option>7:00PM</option>
+		<option>7:30PM</option>
+		<option>8:00PM</option>
+		<option>8:30PM</option>
+		<option>9:00PM</option>
+		<option>9:30PM</option>
+		<option>10:00PM</option>
+	</select><br><br>
+	Group Size:
+	<select id="size">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option><option>9</option>
+		<option>10+</option>
+	</select><br><br> -->
+</form>
+>>>>>>> Stashed changes
 
 <script language="javascript">
 	function setVisibility() {
