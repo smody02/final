@@ -14,6 +14,14 @@
 
 	</style>
 	<script>
+	
+		/* ACCESS APIs FUNCTION: Calls quote API and Date&Time API */
+		function accessAPI(){
+			getQuote();
+			dateNtime();
+		}
+	
+		/* GET QUOTE FUNCTION: Accesses API */
 		function getQuote() {
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
@@ -24,52 +32,134 @@
 			console.log("1 - request object created");
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
-
-		request.open("GET", "http://quotes.rest/qod.json", true)
-
+			request.open("GET", "http://quotes.rest/qod.json", true);
 			console.log("2 - opened request file");
 
 			// Step 3: set up event handler/callback
-
 			request.onreadystatechange = function() {
-
 				if (request.readyState == 4 && request.status == 200) {
-
 					// Step 5: wait for done + success
 					console.log("5 - response received");
 					result = this.responseText;
-					//document.getElementById("data").innerHTML = result;
 					info = JSON.parse(result);
-					// alert("info is " + info.contents.quotes.quote);
-					// alert(JSON.stringify(result));
-					// alert(info);
-					var qotd = info.contents.quotes.quote;
-
-					document.getElementById("data").innerHTML = qotd;
+					var qotd = info.contents.quotes[0].quote;
+					var auth = info.contents.quotes[0].author;
+					document.getElementById("data").innerHTML = "\"" + qotd + "\" - " + auth;
 
 				}
 				else if (request.readyState == 4 && request.status != 200) {
-
-					document.getElementById("data").innerHTML = "Why do something tomorrow when you could do it today?";
-
+					document.getElementById("data").innerHTML = "Something is wrong. Check logs.";
 				}
-
 				else if (request.readyState == 3) {
-
 					document.getElementById("data").innerHTML = "Too soon!  Try again";
-
 				}
 
 			}
-		// Step 4: fire off the HTTP request
+			// Step 4: fire off the HTTP request
 			request.send();
 			console.log("4 - Request sent");
 		}
+		
+		function dateNtime(){
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+			request2 = new XMLHttpRequest();
+			if(!request2){
+				alert("Unable to retrieve date and time data.");
+			}
+			console.log("1 - request object created");
+
+			// Step 2: Set the URL for the AJAX request to be the JSON file
+			request2.open("GET", "http://worldtimeapi.org/api/ip", true);
+			console.log("2 - opened request file");
+
+			// Step 3: set up event handler/callback
+			request2.onreadystatechange = function() {
+				if (request2.readyState == 4 && request2.status == 200) {
+					// Step 5: wait for done + success
+					console.log("5 - response received");
+					result = this.responseText;
+					info = JSON.parse(result);
+					var day = info.day_of_week;
+					
+					//fill week depending on what day it is today
+					if(day == 1){
+						document.getElementById("day0").innerHTML = "Monday (today)";
+						document.getElementById("day1").innerHTML = "Tuesday";
+						document.getElementById("day2").innerHTML = "Wednesday";
+						document.getElementById("day3").innerHTML = "Thursday";
+						document.getElementById("day4").innerHTML = "Friday";
+						document.getElementById("day5").innerHTML = "Saturday";
+						document.getElementById("day6").innerHTML = "Sunday";
+					}
+					else if(day == 2){
+						document.getElementById("day0").innerHTML = "Tuesday (today)";
+						document.getElementById("day1").innerHTML = "Wednesday";
+						document.getElementById("day2").innerHTML = "Thursday";
+						document.getElementById("day3").innerHTML = "Friday";
+						document.getElementById("day4").innerHTML = "Saturday";
+						document.getElementById("day5").innerHTML = "Sunday";
+						document.getElementById("day6").innerHTML = "Monday";
+					}
+					else if(day == 3){
+						document.getElementById("day0").innerHTML = "Wednesday (today)";
+						document.getElementById("day1").innerHTML = "Thursday";
+						document.getElementById("day2").innerHTML = "Friday";
+						document.getElementById("day3").innerHTML = "Saturday";
+						document.getElementById("day4").innerHTML = "Sunday";
+						document.getElementById("day5").innerHTML = "Monday";
+						document.getElementById("day6").innerHTML = "Tuesday";
+					}
+					else if(day == 4){
+						document.getElementById("day0").innerHTML = "Thursday (today)";
+						document.getElementById("day1").innerHTML = "Friday";
+						document.getElementById("day2").innerHTML = "Saturday";
+						document.getElementById("day3").innerHTML = "Sunday";
+						document.getElementById("day4").innerHTML = "Monday";
+						document.getElementById("day5").innerHTML = "Tuesday";
+						document.getElementById("day6").innerHTML = "Wednesday";
+					}
+					else if(day == 5){
+						document.getElementById("day0").innerHTML = "Friday (today)";
+						document.getElementById("day1").innerHTML = "Saturday";
+						document.getElementById("day2").innerHTML = "Sunday";
+						document.getElementById("day3").innerHTML = "Monday";
+						document.getElementById("day4").innerHTML = "Tuesday";
+						document.getElementById("day5").innerHTML = "Wednesday";
+						document.getElementById("day6").innerHTML = "Thursday";
+					}
+					else if(day == 6){
+						document.getElementById("day0").innerHTML = "Saturday (today)";
+						document.getElementById("day1").innerHTML = "Sunday";
+						document.getElementById("day2").innerHTML = "Monday";
+						document.getElementById("day3").innerHTML = "Tuesday";
+						document.getElementById("day4").innerHTML = "Wednesday";
+						document.getElementById("day5").innerHTML = "Thursday";
+						document.getElementById("day6").innerHTML = "Friday";
+					}
+					else if(day == 7){
+						document.getElementById("day0").innerHTML = "Sunday (today)";
+						document.getElementById("day1").innerHTML = "Monday";
+						document.getElementById("day2").innerHTML = "Tuesday";
+						document.getElementById("day3").innerHTML = "Wednesday";
+						document.getElementById("day4").innerHTML = "Thursday";
+						document.getElementById("day5").innerHTML = "Friday";
+						document.getElementById("day6").innerHTML = "Saturday";
+					}
+					
+				}
+
+			}
+			// Step 4: fire off the HTTP request
+			request2.send();
+			console.log("4 - Request sent");
+		}
+		
 	</script>
 </head>
 
 
-<body onload="getQuote()">
+<body onload="accessAPI()">
 	<p>
 	<div class="row">
 	<div class="column lef" >
@@ -84,13 +174,11 @@
 <br> <br> <br>
 <div class="roww">
 	<div class="text">
-	<!-- <div id="data">
+	<div id="data">
 		Loading...
-	</div> -->
-	"An apple a day keeps the doctor away!" - Unknown
+	</div>
 </div>
 </div>
-
 
 <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
     <div class="card">
