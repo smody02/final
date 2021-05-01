@@ -60,6 +60,7 @@
 			console.log("4 - Request sent");
 		}
 		
+		/* DATE & TIME FUNCTION: Accesses API */
 		function dateNtime(){
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
@@ -146,6 +147,27 @@
 						document.getElementById("day5").innerHTML = "Friday";
 						document.getElementById("day6").innerHTML = "Saturday";
 					}
+					
+					//update year in form
+					var date = info.datetime;
+					var year = parseInt(date.substring(0,4));
+					document.getElementById("thisyear").innerHTML = year;
+					document.getElementById("and1").innerHTML = year+1;
+					document.getElementById("and2").innerHTML = year+2;
+					document.getElementById("and3").innerHTML = year+3;
+					document.getElementById("and4").innerHTML = year+4;
+					document.getElementById("and5").innerHTML = year+5;
+					document.getElementById("and6").innerHTML = year+6;
+					document.getElementById("and7").innerHTML = year+7;
+					document.getElementById("and8").innerHTML = year+8;
+					document.getElementById("and9").innerHTML = year+9;
+					document.getElementById("and10").innerHTML = year+10;
+					
+					//update selected month and day depending on current date
+					var month = parseInt(date.substring(5,7))-1;
+					var day = parseInt(date.substring(8,10))-1;
+					document.getElementById("months").selectedIndex = month;
+					document.getElementById("days").selectedIndex = day;
 					
 				}
 
@@ -244,7 +266,7 @@
 			<div class="listedForm">
 			<p id = "name"> Event Name: <input type="text"> </p>
 			<p id = "name"> Date: &nbsp;&nbsp;&nbsp;
-				<span>Month:</span><select>
+				<span>Month:</span><select id="months">
 					<option>January</option>
 					<option>February</option>
 					<option>March</option>
@@ -258,7 +280,7 @@
 					<option>November</option>
 					<option>December</option>
 				</select>
-				<span>Day:</span><select>
+				<span>Day:</span><select id="days">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -292,8 +314,17 @@
 					<option>31</option>
 				</select>
 				<span>Year:</span><select>
-					<option>AM</option>
-					<option>PM</option>
+					<option id = "thisyear">AM</option>
+					<option id = "and1">AM</option>
+					<option id = "and2">AM</option>
+					<option id = "and3">AM</option>
+					<option id = "and4">AM</option>
+					<option id = "and5">AM</option>
+					<option id = "and6">AM</option>
+					<option id = "and7">AM</option>
+					<option id = "and8">AM</option>
+					<option id = "and9">AM</option>
+					<option id = "and10">AM</option>
 				</select><br>
 			</p>
 			<p>
