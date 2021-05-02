@@ -176,7 +176,7 @@ function event(){
 
 function printEvent() {
 	global $conn;
-	$query = "SELECT events.name FROM events INNER JOIN users ON events.userID = users.id";
+	$query = "SELECT events.name FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
 	$result = $conn->query($query);
 
 	$event = $result->fetch_assoc();
