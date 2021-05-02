@@ -266,7 +266,7 @@
 			<div class="listedForm">
 			<p id = "name"> Event Name: <input type="text"> </p>
 			<p id = "name"> Date: &nbsp;&nbsp;&nbsp;
-				<span>Month:</span><select id="months">
+				<span>Month:</span><select id="months" name = "month">
 					<option>January</option>
 					<option>February</option>
 					<option>March</option>
@@ -280,7 +280,7 @@
 					<option>November</option>
 					<option>December</option>
 				</select>
-				<span>Day:</span><select id="days">
+				<span>Day:</span><select id="days" name = "day">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -313,7 +313,7 @@
 					<option>30</option>
 					<option>31</option>
 				</select>
-				<span>Year:</span><select>
+				<span>Year:</span><select name = "year">
 					<option id = "thisyear">AM</option>
 					<option id = "and1">AM</option>
 					<option id = "and2">AM</option>
@@ -332,7 +332,7 @@
 				<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
 			</p>
 			<p id = "ifYes" style = "visibility: hidden;">Start Time:&nbsp;&nbsp;&nbsp;
-				<span>Hour:</span><select>
+				<span>Hour:</span><select name = "start_hour">
 					<option>12:00</option>
 					<option>1:00</option>
 					<option>2:00</option>
@@ -346,7 +346,7 @@
 					<option>10:00</option>
 					<option>11:00</option>
 				</select>
-				<span>Minute:</span><select>
+				<span>Minute:</span><select name = "start_min">
 					<option>00</option>
 					<option>05</option>
 					<option>10</option>
@@ -365,7 +365,7 @@
 					<option>PM</option>
 				</select><br>
 			End Time:<span style="margin-left: 2px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				<span>Hour:</span><select>
+				<span>Hour:</span><select name = "end_hour">
 					<option>12:00</option>
 					<option>1:00</option>
 					<option>2:00</option>
@@ -379,7 +379,7 @@
 					<option>10:00</option>
 					<option>11:00</option>
 				</select>
-				<span>Minute:</span><select>
+				<span>Minute:</span><select name = "end_min">
 					<option>00</option>
 					<option>05</option>
 					<option>10</option>
@@ -398,8 +398,8 @@
 					<option>PM</option>
 				</select>
 			</p>
-			<p id = "location">Location <input type="text"></p>
-			Desription: <br><br><textarea id="description" rows="4" cols="50"> </textarea><br><br>
+			<p id = "location" name = "location">Location <input type="text"></p>
+			Desription: <br><br><textarea name = "description" id="description" rows="4" cols="50"> </textarea><br><br>
 			<button onclick="return validate()">Enter</button>
 		</form>
 		</div>
