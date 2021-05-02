@@ -60,7 +60,7 @@ a:hover, a:active {
 </head>
 <body>
 <div class="login-form">
-    <form method="post" action="login.php">
+    <form method="post" action="sign_in.php">
         <h2 class="text-center">Log in</h2>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" name="username">
