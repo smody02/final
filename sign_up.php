@@ -1,3 +1,4 @@
+<?php include('functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,33 +129,24 @@ div#plsCenter {
 <body>
 <!-- <div id="plsCenter" > -->
 <div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form method="post" action="sign_up.php">
 		<h2>Sign Up</h2>
 		<p>Please fill in this form to create an account!</p>
 		<hr>
         <div class="form-group">
 			<div class="row">
 				<div class="col"><input type="text" class="form-control" name="username" placeholder="Username" ></div>
-				<!-- <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div> -->
 			</div>
-        </div>
-        <div class="form-group">
-        	<!-- <input type="email" class="form-control" name="email" placeholder="Email" required="required"> -->
         </div>
 		<div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password">
         </div>
 		<div class="form-group">
-            <!-- <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required"> -->
-        </div>
-        <div class="form-group">
-			<!-- <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label> -->
-		</div>
-		<div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+			<?php echo display_error(); ?>
+            <input type="submit" class="btn btn-primary btn-lg" value="Sign Up" name="register_btn"/>
         </div>
     </form>
-	<div class="hint-text">Already have an account? <a href="sign_in.html">Login here</a></div>
+	<div class="hint-text">Already have an account? <a href="sign_in.php">Login here</a></div>
 </div>
 <!-- </div> -->
 </body>
