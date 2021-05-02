@@ -429,8 +429,8 @@
 				</select>
 			</p>
 			<p id = "location">Location <input type="text" name = "location"></p>
-			<p id="description">Desription: <br><br><input type="text" name = "description"></p><br><br>
-			<input type = "submit" value = "Make Event" name="event_btn">Make an Event</button>
+			<p id="description">Desription: <br><br><input type="text" name = "description"></p>
+			<input type = "submit" value = "Make Event" name="event_btn">
 		</form>
 		</div>
 	</div>
