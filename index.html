@@ -72,7 +72,7 @@
 			console.log("1 - request object created");
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
-			request2.open("GET", "http://worldtimeapi.org/api/ip", true);
+			request2.open("GET", "https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/ip", true);
 			console.log("2 - opened request file");
 
 			// Step 3: set up event handler/callback
@@ -165,6 +165,19 @@
 					document.getElementById("and9").innerHTML = year+9;
 					document.getElementById("and10").innerHTML = year+10;
 					
+					document.getElementById("thisyear").value = year;
+					document.getElementById("and1").value = year+1;
+					document.getElementById("and2").value = year+2;
+					document.getElementById("and3").value = year+3;
+					document.getElementById("and4").value = year+4;
+					document.getElementById("and5").value = year+5;
+					document.getElementById("and6").value = year+6;
+					document.getElementById("and7").value = year+7;
+					document.getElementById("and8").value = year+8;
+					document.getElementById("and9").value = year+9;
+					document.getElementById("and10").value = year+10;
+					
+					
 					//update selected month and day depending on current date
 					var month = parseInt(date.substring(5,7))-1;
 					var day = parseInt(date.substring(8,10))-1;
@@ -173,7 +186,7 @@
 					
 				}
 				else{
-					document.getElementById("error").innerHTML = "error";
+					document.getElementById("error").innerHTML = "error, ready state is " + request2.readyState + " and status is " + request2.status;
 				}
 
 			}
@@ -335,17 +348,17 @@
 					<option value="31">31</option>
 				</select>
 				<span>Year:</span><select name = "year">
-					<option id = "thisyear"></option>
-					<option id = "and1"></option>
-					<option id = "and2"></option>
-					<option id = "and3"></option>
-					<option id = "and4"></option>
-					<option id = "and5"></option>
-					<option id = "and6"></option>
-					<option id = "and7"></option>
-					<option id = "and8"></option>
-					<option id = "and9"></option>
-					<option id = "and10"></option>
+					<option id = "thisyear" value=""></option>
+					<option id = "and1" value=""></option>
+					<option id = "and2" value=""></option>
+					<option id = "and3" value=""></option>
+					<option id = "and4" value=""></option>
+					<option id = "and5" value=""></option>
+					<option id = "and6" value=""></option>
+					<option id = "and7" value=""></option>
+					<option id = "and8" value=""></option>
+					<option id = "and9" value=""></option>
+					<option id = "and10" value=""></option>
 				</select><br>
 			</p>
 			<p id = "ifYes" style = "visibility: hidden;">Start Time:&nbsp;&nbsp;&nbsp;
