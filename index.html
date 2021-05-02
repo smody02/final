@@ -82,6 +82,7 @@
 					result = this.responseText;
 					info = JSON.parse(result);
 					var day = info.day_of_week;
+					document.getElementById("error").innerHTML = "today is" + day;
 					
 					//fill week depending on what day it is today
 					if(day == 1){
@@ -138,7 +139,7 @@
 						document.getElementById("day5").innerHTML = "Thursday";
 						document.getElementById("day6").innerHTML = "Friday";
 					}
-					else if(day == 7){
+					else if(day == 0){
 						document.getElementById("day0").innerHTML = "Sunday (today)";
 						document.getElementById("day1").innerHTML = "Monday";
 						document.getElementById("day2").innerHTML = "Tuesday";
@@ -170,6 +171,9 @@
 					document.getElementById("days").selectedIndex = day;
 					
 				}
+				else{
+					document.getElementById("error").innerHTML = "error";
+				}
 
 			}
 			// Step 4: fire off the HTTP request
@@ -199,6 +203,7 @@
 	<div id="data">
 		Loading...
 	</div>
+	<div id="error"></div>
 </div>
 </div>
 
