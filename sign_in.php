@@ -73,7 +73,7 @@ a:hover, a:active {
             <input type="submit" class="btn btn-primary btn-block" value="Sign In" name="login_btn"/>
         </div>
     </form>
-    <p class="text-center"><a href="sign_up.html">Create an Account</a></p>
+    <p class="text-center"><a href="sign_up.php">Create an Account</a></p>
 </div>
 </body>
 </html>
