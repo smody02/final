@@ -72,7 +72,7 @@
 			console.log("1 - request object created");
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
-			request2.open("GET", "http://worldtimeapi.org/api/ip", true);
+			request2.open("GET", "https://api.ipgeolocation.io/timezone?apiKey=9b49662971d34427acea9b0c7e6481e6&tz=America/New_York", true);
 			console.log("2 - opened request file");
 
 			// Step 3: set up event handler/callback
@@ -82,8 +82,31 @@
 					console.log("5 - date response received");
 					result = this.responseText;
 					info = JSON.parse(result);
-					var day = info.day_of_week;
-					document.getElementById("error").innerHTML = "today is" + day;
+					
+					//need to convert day of the week into a number
+					var day;
+					var dow = info.date_time_txt.substring(0,3);
+					if(dow=="Sun"){
+						day = 0;
+					}
+					else if(dow=="Mon"){
+						day = 1; 
+					}
+					else if(dow=="Tue"){
+						day = 2; 
+					}
+					else if(dow=="Wed"){
+						day = 3; 
+					}
+					else if(dow=="Thu"){
+						day = 4; 
+					}
+					else if(dow=="Fri"){
+						day = 5; 
+					}
+					else if(dow=="Sat"){
+						day = 6; 
+					}
 					
 					//fill week depending on what day it is today
 					if(day == 1){
@@ -151,8 +174,8 @@
 					}
 					
 					//update year in form
-					var date = info.datetime;
-					var year = parseInt(date.substring(0,4));
+					
+					var year = parseInt(info.year);
 					document.getElementById("thisyear").innerHTML = year;
 					document.getElementById("and1").innerHTML = year+1;
 					document.getElementById("and2").innerHTML = year+2;
@@ -179,14 +202,11 @@
 					
 					
 					//update selected month and day depending on current date
-					var month = parseInt(date.substring(5,7))-1;
-					var day = parseInt(date.substring(8,10))-1;
+					var month = parseInt(info.month);
+					var day = parseInt(info.date.substring(8,10));
 					document.getElementById("months").selectedIndex = month;
 					document.getElementById("days").selectedIndex = day;
 					
-				}
-				else{
-					document.getElementById("error").innerHTML = "error, ready state is " + request2.readyState + " and status is " + request2.status;
 				}
 
 			}
