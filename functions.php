@@ -132,6 +132,8 @@ function event(){
 	$start_min = $_POST['start_min'];
 	$end_hour = $_POST['end_hour'];
 	$end_min = $_POST['end_min'];
+    $start_am_or_pm = $_POST['start_am_or_pm'];
+    $end_am_or_pm = $_POST['end_am_or_pm'];
 
 	if (empty($name)) {
 		array_push($errors, "Name is required");
@@ -163,10 +165,16 @@ function event(){
 	if (empty($end_min)) {
 		array_push($errors, "End minute is required");
 	}
+    if (empty($start_am_or_pm)) {
+		array_push($errors, "Start AM or PM is required");
+	}
+    if (empty($end_am_or_pm)) {
+		array_push($errors, "End AM or PM is required");
+	}
 
 	if (count($errors) == 0) {
 
-		$sql = "INSERT INTO events (userID, name, location, description, day, month, year, timeStartHour, timeStartMinute, timeEndHour, timeEndMinute) VALUES('$user_id', '$name', '$location', '$description', '$day', '$month', '$year', '$start_hour', '$start_min', '$end_hour', '$end_min')";
+		$sql = "INSERT INTO events (userID, name, location, description, day, month, year, timeStartHour, timeStartMinute, timeEndHour, timeEndMinute, start_am_or_pm, end_am_or_pm) VALUES('$user_id', '$name', '$location', '$description', '$day', '$month', '$year', '$start_hour', '$start_min', '$end_hour', '$end_min', '$start_am_or_pm', '$end_am_or_pm')";
 		$conn->query($sql);
 
 		header('location: index.php');
