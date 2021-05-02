@@ -1,3 +1,4 @@
+<?php include('functions.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -192,8 +193,23 @@
 	Calm & Collected Calendar
 </div>
 <div class="column righ">
-	Welcome, Sonia and Jeremy!
-	<a id="logOut" href="#event">Log out</a>
+	<?php  if (isset($_SESSION['user'])) : ?>
+		<strong><?php echo $_SESSION['user']['username']; ?></strong>
+
+		<small>
+			<a href="index.php?logout='1'" style="color:#FF0000;">Sign Out</a>
+		</small>
+
+	<?php endif ?>
+	
+	<?php  if (!isset($_SESSION['user'])) : ?>
+		
+		<small>
+			<a href="sign_in.php" style="color:#FF0000;">Sign In</a>
+		</small>
+
+	<?php endif ?>
+	
 </div>
 </div>
 </p>
@@ -267,74 +283,70 @@
 		<div id= "plsCenter"> ADD EVENT </div>
 
 			<div class="eventForm">
-		<form id = "form"><!-- method="post" action="index.php"> -->
+		<form id = "form" method="POST" action="index.php">
 			<div class="listedForm">
 			<p id = "name"> Event Name: <input type="text"> </p>
 			<p id = "name"> Date: &nbsp;&nbsp;&nbsp;
 				<span>Month:</span><select id="months" name = "month">
-					<option>January</option>
-					<option>February</option>
-					<option>March</option>
-					<option>April</option>
-					<option>May</option>
-					<option>June</option>
-					<option>July</option>
-					<option>August</option>
-					<option>September</option>
-					<option>October</option>
-					<option>November</option>
-					<option>December</option>
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
 				</select>
 				<span>Day:</span><select id="days" name = "day">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
-					<option>11</option>
-					<option>12</option>
-					<option>13</option>
-					<option>14</option>
-					<option>15</option>
-					<option>16</option>
-					<option>17</option>
-					<option>18</option>
-					<option>19</option>
-					<option>20</option>
-					<option>21</option>
-					<option>22</option>
-					<option>23</option>
-					<option>24</option>
-					<option>25</option>
-					<option>26</option>
-					<option>27</option>
-					<option>28</option>
-					<option>29</option>
-					<option>30</option>
-					<option>31</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
 				</select>
 				<span>Year:</span><select name = "year">
-					<option id = "thisyear">AM</option>
-					<option id = "and1">AM</option>
-					<option id = "and2">AM</option>
-					<option id = "and3">AM</option>
-					<option id = "and4">AM</option>
-					<option id = "and5">AM</option>
-					<option id = "and6">AM</option>
-					<option id = "and7">AM</option>
-					<option id = "and8">AM</option>
-					<option id = "and9">AM</option>
-					<option id = "and10">AM</option>
+					<option id = "thisyear"></option>
+					<option id = "and1"></option>
+					<option id = "and2"></option>
+					<option id = "and3"></option>
+					<option id = "and4"></option>
+					<option id = "and5"></option>
+					<option id = "and6"></option>
+					<option id = "and7"></option>
+					<option id = "and8"></option>
+					<option id = "and9"></option>
+					<option id = "and10"></option>
 				</select><br>
-			</p>
-			<p>
-				<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
-				<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
 			</p>
 			<p id = "ifYes" style = "visibility: hidden;">Start Time:&nbsp;&nbsp;&nbsp;
 				<span>Hour:</span><select name = "start_hour">
