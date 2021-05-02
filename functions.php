@@ -100,7 +100,7 @@ function login(){
 	if (count($errors) == 0) {
 	
 		$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
-		$result = $conn->query($query);
+		$results = $conn->query($query);
 		if ($results->num_rows == 1) {
 			$logged_in_user = $results->fetch_assoc();
 			
@@ -176,7 +176,7 @@ function event(){
 
 function printEvent() {
 	global $conn;
-	$query = "SELECT events.name FROM events INNER JOIN users ON events.userID = users.id";
+	$query = "SELECT events.name FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
 	$result = $conn->query($query);
 
 	$event = $result->fetch_assoc();
