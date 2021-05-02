@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 //Initialize connection info
@@ -17,7 +17,7 @@ $conn = new mysqli($server, $userid, $pw, $db);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 if (isset($_POST['register_btn'])) {
 	register();
@@ -31,15 +31,15 @@ function register(){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	if (empty($username)) { 
-		array_push($errors, "Username is required"); 
+	if (empty($username)) {
+		array_push($errors, "Username is required");
 	}
-	if (empty($password)) { 
-		array_push($errors, "Password is required"); 
+	if (empty($password)) {
+		array_push($errors, "Password is required");
 	}
 
 	if (count($errors) == 0) {
-		
+
 		$sql = "INSERT INTO users (username, password) VALUES('$username', '$password')";
 		$conn->query($sql);
 
@@ -96,18 +96,18 @@ function login(){
 	if (empty($password)) {
 		array_push($errors, "Password is required");
 	}
-	
+
 	if (count($errors) == 0) {
-	
+
 		$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
 		$results = $conn->query($query);
 		if ($results->num_rows == 1) {
 			$logged_in_user = $results->fetch_assoc();
-			
+
 			$_SESSION['user'] = $logged_in_user;
 			$_SESSION['success']  = "You are now logged in";
 			header('location: index.php');
-		
+
 		} else {
 			array_push($errors, "Wrong username/password combination");
 		}
@@ -163,14 +163,14 @@ function event(){
 	if (empty($end_min)) {
 		array_push($errors, "End minute is required");
 	}
-	
+
 	if (count($errors) == 0) {
-	
+
 		$sql = "INSERT INTO events (userID, name, location, description, day, month, year, timeStartHour, timeStartMinute, timeEndHour, timeEndMinute) VALUES('$user_id', '$name', '$location', '$description', '$day', '$month', '$year', '$start_hour', '$start_min', '$end_hour', '$end_min')";
 		$conn->query($sql);
 
 		header('location: index.php');
-		
+
 	}
 }
 
@@ -180,9 +180,9 @@ function printEvent() {
 	$result = $conn->query($query);
 
 	$event = $result->fetch_assoc();
-	
+
 	echo($event["name"]);
-	
+
 }
 
 ?>
