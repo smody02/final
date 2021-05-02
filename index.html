@@ -72,14 +72,14 @@
 			console.log("1 - request object created");
 
 			// Step 2: Set the URL for the AJAX request to be the JSON file
-			request2.open("GET", "https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/ip", true);
+			request2.open("GET", "http://worldtimeapi.org/api/ip", true);
 			console.log("2 - opened request file");
 
 			// Step 3: set up event handler/callback
 			request2.onreadystatechange = function() {
 				if (request2.readyState == 4 && request2.status == 200) {
 					// Step 5: wait for done + success
-					console.log("5 - response received");
+					console.log("5 - date response received");
 					result = this.responseText;
 					info = JSON.parse(result);
 					var day = info.day_of_week;
