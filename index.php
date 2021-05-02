@@ -430,7 +430,7 @@
 			</p>
 			<p id = "location">Location <input type="text" name = "location"></p>
 			<p id="description">Desription: <br><br><input type="text" name = "description"></p><br><br>
-			<submit type = "submit" value = "Make Event" name="event_btn">Make an Event</button>
+			<input type = "submit" value = "Make Event" name="event_btn">Make an Event</button>
 		</form>
 		</div>
 	</div>
