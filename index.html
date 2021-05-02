@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+<head>
+	<title>C&C Calendar</title>
+	<meta charset="utf-8"/>
+	<link rel='stylesheet' type="text/css" href="style.css" />
+	<style type="text/css">
+	body {
+		background-image: url('background.jpg');
+		background-attachment: fixed;
+		background-size: 100%;
+		position: relative;
+	}
+
+	</style>
+	<script>
+
+		/* ACCESS APIs FUNCTION: Calls quote API and Date&Time API */
+		function accessAPI(){
+			getQuote();
+			dateNtime();
+		}
+
+		/* GET QUOTE FUNCTION: Accesses API */
+		function getQuote() {
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+			request = new XMLHttpRequest();
+			if(!request){
+				alert("Unable to retrieve quote.");
+			}
+			console.log("1 - request object created");
+
+			// Step 2: Set the URL for the AJAX request to be the JSON file
+			request.open("GET", "http://quotes.rest/qod.json", true);
+			console.log("2 - opened request file");
+
+			// Step 3: set up event handler/callback
+			request.onreadystatechange = function() {
+				if (request.readyState == 4 && request.status == 200) {
+					// Step 5: wait for done + success
+					console.log("5 - response received");
+					result = this.responseText;
+					info = JSON.parse(result);
+					var qotd = info.contents.quotes[0].quote;
+					var auth = info.contents.quotes[0].author;
+					document.getElementById("data").innerHTML = "\"" + qotd + "\" - " + auth;
+
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+					document.getElementById("data").innerHTML = "Something is wrong. Check logs.";
+				}
+				else if (request.readyState == 3) {
+					document.getElementById("data").innerHTML = "Too soon!  Try again";
+				}
+
+			}
+			// Step 4: fire off the HTTP request
+			request.send();
+			console.log("4 - Request sent");
+		}
+
+		/* DATE & TIME FUNCTION: Accesses API */
+		function dateNtime(){
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+			request2 = new XMLHttpRequest();
+			if(!request2){
+				alert("Unable to retrieve date and time data.");
+			}
+			console.log("1 - request object created");
+
+			// Step 2: Set the URL for the AJAX request to be the JSON file
+			request2.open("GET", "http://worldtimeapi.org/api/ip", true);
+			console.log("2 - opened request file");
+
+			// Step 3: set up event handler/callback
+			request2.onreadystatechange = function() {
+				if (request2.readyState == 4 && request2.status == 200) {
+					// Step 5: wait for done + success
+					console.log("5 - response received");
+					result = this.responseText;
+					info = JSON.parse(result);
+					var day = info.day_of_week;
+
+					//fill week depending on what day it is today
+					if(day == 1){
+						document.getElementById("day0").innerHTML = "Monday (today)";
+						document.getElementById("day1").innerHTML = "Tuesday";
+						document.getElementById("day2").innerHTML = "Wednesday";
+						document.getElementById("day3").innerHTML = "Thursday";
+						document.getElementById("day4").innerHTML = "Friday";
+						document.getElementById("day5").innerHTML = "Saturday";
+						document.getElementById("day6").innerHTML = "Sunday";
+					}
+					else if(day == 2){
+						document.getElementById("day0").innerHTML = "Tuesday (today)";
+						document.getElementById("day1").innerHTML = "Wednesday";
+						document.getElementById("day2").innerHTML = "Thursday";
+						document.getElementById("day3").innerHTML = "Friday";
+						document.getElementById("day4").innerHTML = "Saturday";
+						document.getElementById("day5").innerHTML = "Sunday";
+						document.getElementById("day6").innerHTML = "Monday";
+					}
+					else if(day == 3){
+						document.getElementById("day0").innerHTML = "Wednesday (today)";
+						document.getElementById("day1").innerHTML = "Thursday";
+						document.getElementById("day2").innerHTML = "Friday";
+						document.getElementById("day3").innerHTML = "Saturday";
+						document.getElementById("day4").innerHTML = "Sunday";
+						document.getElementById("day5").innerHTML = "Monday";
+						document.getElementById("day6").innerHTML = "Tuesday";
+					}
+					else if(day == 4){
+						document.getElementById("day0").innerHTML = "Thursday (today)";
+						document.getElementById("day1").innerHTML = "Friday";
+						document.getElementById("day2").innerHTML = "Saturday";
+						document.getElementById("day3").innerHTML = "Sunday";
+						document.getElementById("day4").innerHTML = "Monday";
+						document.getElementById("day5").innerHTML = "Tuesday";
+						document.getElementById("day6").innerHTML = "Wednesday";
+					}
+					else if(day == 5){
+						document.getElementById("day0").innerHTML = "Friday (today)";
+						document.getElementById("day1").innerHTML = "Saturday";
+						document.getElementById("day2").innerHTML = "Sunday";
+						document.getElementById("day3").innerHTML = "Monday";
+						document.getElementById("day4").innerHTML = "Tuesday";
+						document.getElementById("day5").innerHTML = "Wednesday";
+						document.getElementById("day6").innerHTML = "Thursday";
+					}
+					else if(day == 6){
+						document.getElementById("day0").innerHTML = "Saturday (today)";
+						document.getElementById("day1").innerHTML = "Sunday";
+						document.getElementById("day2").innerHTML = "Monday";
+						document.getElementById("day3").innerHTML = "Tuesday";
+						document.getElementById("day4").innerHTML = "Wednesday";
+						document.getElementById("day5").innerHTML = "Thursday";
+						document.getElementById("day6").innerHTML = "Friday";
+					}
+					else if(day == 7){
+						document.getElementById("day0").innerHTML = "Sunday (today)";
+						document.getElementById("day1").innerHTML = "Monday";
+						document.getElementById("day2").innerHTML = "Tuesday";
+						document.getElementById("day3").innerHTML = "Wednesday";
+						document.getElementById("day4").innerHTML = "Thursday";
+						document.getElementById("day5").innerHTML = "Friday";
+						document.getElementById("day6").innerHTML = "Saturday";
+					}
+
+					//update year in form
+					var date = info.datetime;
+					var year = parseInt(date.substring(0,4));
+					document.getElementById("thisyear").innerHTML = year;
+					document.getElementById("and1").innerHTML = year+1;
+					document.getElementById("and2").innerHTML = year+2;
+					document.getElementById("and3").innerHTML = year+3;
+					document.getElementById("and4").innerHTML = year+4;
+					document.getElementById("and5").innerHTML = year+5;
+					document.getElementById("and6").innerHTML = year+6;
+					document.getElementById("and7").innerHTML = year+7;
+					document.getElementById("and8").innerHTML = year+8;
+					document.getElementById("and9").innerHTML = year+9;
+					document.getElementById("and10").innerHTML = year+10;
+
+					//update selected month and day depending on current date
+					var month = parseInt(date.substring(5,7))-1;
+					var day = parseInt(date.substring(8,10))-1;
+					document.getElementById("months").selectedIndex = month;
+					document.getElementById("days").selectedIndex = day;
+
+				}
+
+			}
+			// Step 4: fire off the HTTP request
+			request2.send();
+			console.log("4 - Request sent");
+		}
+
+	</script>
+</head>
+
+
+<body onload="accessAPI()">
+	<p>
+	<div class="row">
+	<div class="column lef" >
+	Calm & Collected Calendar
+</div>
+<div class="column righ">
+	Welcome, Sonia and Jeremy!
+	<a id="logOut" href="#event">Log out</a>
+</div>
+</div>
+</p>
+<br> <br> <br>
+<div class="roww">
+	<div class="text">
+	<div id="data">
+		Loading...
+	</div>
+</div>
+</div>
+
+<div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
+    <div class="card">
+			<!-- <h3 id="myInput" value="Hello"> <br> hello </h3> -->
+
+
+
+
+
+        <div class="card-header" id="monthAndYear"> TO DO: </div>
+				<!-- <div id="plsCenter"> -->
+        <table class="table" id="calendar">
+            <tr>
+							<!-- where to add the ndays of the week -->
+                <th id = "day0"  > Today </th>
+                <th id = "day1"  > Tomorrow </th>
+                <th id = "day2"  > PH</th>
+                <th id = "day3"  > PH </th>
+                <th id = "day4"  > PH </th>
+                <th id = "day5"  > PH </th>
+                <th id = "day6"  > PH </th>
+            </tr>
+						<tr>
+							<!-- where to add the info from the data base -->
+							<td id = "event0" > -Walk the dog: 7:30 </td>
+							<td id = "event1" > Darty at Bridget's: 1:30 </td>
+							<td id = "event2" > Poker with Seixas and his dog: 9:30 </td>
+							<td id = "event3" > Lunch with Sonia: 12:30 </td>
+							<td id = "event4" > Breakfast with the Cool Kids: 9:30 </td>
+							<td id = "event5" > ojsbdf alsdfbgggg </td>
+							<td id = "event6" > omggggggg </td>
+						</tr>
+					</table>
+
+            <tbody id="calendar-body">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="scripts.js"></script>
+
+<!-- Optional JavaScript for bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+	<div class="row">
+	<div class="column left" >
+		<div id= "plsCenter"> ADD EVENT </div>
+
+			<div class="eventForm">
+		<form id = "form"><!-- method="post" action="index.php"> -->
+			<div class="listedForm">
+			<p id = "name"> Event Name: <input type="text"> </p>
+			<p id = "name"> Date: &nbsp;&nbsp;&nbsp;
+				<span>Month:</span><select id="months">
+					<option>January</option>
+					<option>February</option>
+					<option>March</option>
+					<option>April</option>
+					<option>May</option>
+					<option>June</option>
+					<option>July</option>
+					<option>August</option>
+					<option>September</option>
+					<option>October</option>
+					<option>November</option>
+					<option>December</option>
+				</select>
+				<span>Day:</span><select id="days">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+					<option>26</option>
+					<option>27</option>
+					<option>28</option>
+					<option>29</option>
+					<option>30</option>
+					<option>31</option>
+				</select>
+				<span>Year:</span><select>
+					<option id = "thisyear">AM</option>
+					<option id = "and1">AM</option>
+					<option id = "and2">AM</option>
+					<option id = "and3">AM</option>
+					<option id = "and4">AM</option>
+					<option id = "and5">AM</option>
+					<option id = "and6">AM</option>
+					<option id = "and7">AM</option>
+					<option id = "and8">AM</option>
+					<option id = "and9">AM</option>
+					<option id = "and10">AM</option>
+				</select><br>
+			</p>
+			<p>
+				<input type="radio" name="ad_or_st" value = "all_day" checked="checked" id = "all_day" onclick="setVisibility()"/>All Day
+				<input type="radio" name='ad_or_st' value = "specified_time" id = "specified_time" onclick ="setVisibility()"/>Specified Time
+			</p>
+			<p id = "ifYes" style = "visibility: hidden;">Start Time:&nbsp;&nbsp;&nbsp;
+				<span>Hour:</span><select>
+					<option>12:00</option>
+					<option>1:00</option>
+					<option>2:00</option>
+					<option>3:00</option>
+					<option>4:00</option>
+					<option>5:00</option>
+					<option>6:00</option>
+					<option>7:00</option>
+					<option>8:00</option>
+					<option>9:00</option>
+					<option>10:00</option>
+					<option>11:00</option>
+				</select>
+				<span>Minute:</span><select>
+					<option>00</option>
+					<option>05</option>
+					<option>10</option>
+					<option>15</option>
+					<option>20</option>
+					<option>25</option>
+					<option>30</option>
+					<option>35</option>
+					<option>40</option>
+					<option>45</option>
+					<option>50</option>
+					<option>55</option>
+				</select>
+				<span>AM/PM:</span><select>
+					<option>AM</option>
+					<option>PM</option>
+				</select><br>
+			End Time:<span style="margin-left: 2px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span>Hour:</span><select>
+					<option>12:00</option>
+					<option>1:00</option>
+					<option>2:00</option>
+					<option>3:00</option>
+					<option>4:00</option>
+					<option>5:00</option>
+					<option>6:00</option>
+					<option>7:00</option>
+					<option>8:00</option>
+					<option>9:00</option>
+					<option>10:00</option>
+					<option>11:00</option>
+				</select>
+				<span>Minute:</span><select>
+					<option>00</option>
+					<option>05</option>
+					<option>10</option>
+					<option>15</option>
+					<option>20</option>
+					<option>25</option>
+					<option>30</option>
+					<option>35</option>
+					<option>40</option>
+					<option>45</option>
+					<option>50</option>
+					<option>55</option>
+				</select>
+				<span>AM/PM:</span><select>
+					<option>AM</option>
+					<option>PM</option>
+				</select>
+			</p>
+			<p id = "location">Location <input type="text"></p>
+			Desription: <br><br><textarea id="description" rows="4" cols="50"> </textarea><br><br>
+			<button onclick="return validate()">Enter</button>
+		</form>
+		</div>
+	</div>
+		</div>
+
+<div class="column right" >
+	<!-- <div class="uE" > -->
+		<div id= "plsCenterGreen"> UPCOMING EVENTS </div>
+
+	<!-- </div> -->
+	<!-- <div class="aE" >
+		Add New Event
+	<a href="#event">&#43;</a>
+</div> -->
+<!-- where to add the upcoming events -->
+<div id="listedEvents">
+	1:30-2:30: Hair Appointment
+	<br><br>
+	6:30-8:30: Dinner with Jeremy
+</div>
+</div>
+</div>
+
+<script language="javascript">
+	function setVisibility() {
+		if (document.getElementById("specified_time").checked) {
+			document.getElementById("ifYes").style.visibility = "visible";
+		}
+		else {
+			document.getElementById("ifYes").style.visibility = "hidden";
+		}
+	}
+</script>
+</body>
+</html>
