@@ -4,7 +4,7 @@
 <head>
 	<title>C&C Calendar</title>
 	<meta charset="utf-8"/>
-	<link rel='stylesheet' type="text/css" href="style.css" />
+	<link rel='stylesheet' type="text/css" href="style2.css" />
 	<style type="text/css">
 	body {
 		background-image: url('background1.jpg');
