@@ -315,10 +315,10 @@
 </div>
 <div class="column righ">
 	<?php  if (isset($_SESSION['user'])) : ?>
-		<strong><?php echo $_SESSION['user']['username']; ?></strong>
+		<span id="user"><?php echo $_SESSION['user']['username']; ?></span>
 
 		<small>
-			<a href="index.php?logout='1'" style="color:#FF0000;">Sign Out</a>
+			<a href="index.php?logout='1'" >Sign Out</a>
 		</small>
 
 	<?php endif ?>
@@ -326,7 +326,7 @@
 	<?php  if (!isset($_SESSION['user'])) : ?>
 
 		<small>
-			<a href="sign_in.php" style="color:#FF0000;">Sign In</a>
+			<a href="sign_in.php" >Sign In</a>
 		</small>
 
 	<?php endif ?>

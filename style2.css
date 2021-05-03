@@ -299,3 +299,7 @@ input#makeEvent:hover, input#makeEvent:active {
   background-color: #1D5B7A;
   color: #fff;
 }
+
+#user{
+	padding-right: 30px;
+}
