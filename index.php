@@ -14,21 +14,21 @@
 	}
 
 	</style>
-	
-	
+
+
 	<script language="javascript">
-	
-		var this_day; 
+
+		var this_day;
 		var this_month;
 		var this_year;
-	
+
 		/* ACCESS APIs FUNCTION: Calls quote API and Date&Time API */
 		function accessAPI(){
 			getQuote();
 			dateNtime();
 			fillEvents();
 		}
-	
+
 		/* GET QUOTE FUNCTION: Accesses API */
 		function getQuote() {
 			/* Step 1: Make instance of request object...
@@ -67,7 +67,7 @@
 			request.send();
 			console.log("4 - Request sent");
 		}
-		
+
 		/* DATE & TIME FUNCTION: Accesses API */
 		function dateNtime(){
 			/* Step 1: Make instance of request object...
@@ -89,7 +89,7 @@
 					console.log("5 - date response received");
 					result = this.responseText;
 					info = JSON.parse(result);
-					
+
 					//need to convert day of the week into a number
 					var day;
 					var dow = info.date_time_txt.substring(0,3);
@@ -97,24 +97,24 @@
 						day = 0;
 					}
 					else if(dow=="Mon"){
-						day = 1; 
+						day = 1;
 					}
 					else if(dow=="Tue"){
-						day = 2; 
+						day = 2;
 					}
 					else if(dow=="Wed"){
-						day = 3; 
+						day = 3;
 					}
 					else if(dow=="Thu"){
-						day = 4; 
+						day = 4;
 					}
 					else if(dow=="Fri"){
-						day = 5; 
+						day = 5;
 					}
 					else if(dow=="Sat"){
-						day = 6; 
+						day = 6;
 					}
-					
+
 					//fill week depending on what day it is today
 					if(day == 1){
 						document.getElementById("day0").innerHTML = "Monday (today)";
@@ -179,9 +179,9 @@
 						document.getElementById("day5").innerHTML = "Friday";
 						document.getElementById("day6").innerHTML = "Saturday";
 					}
-					
+
 					//update year in form
-					
+
 					var year = parseInt(info.year);
 					document.getElementById("thisyear").innerHTML = year;
 					document.getElementById("and1").innerHTML = year+1;
@@ -194,7 +194,7 @@
 					document.getElementById("and8").innerHTML = year+8;
 					document.getElementById("and9").innerHTML = year+9;
 					document.getElementById("and10").innerHTML = year+10;
-					
+
 					document.getElementById("thisyear").value = year;
 					document.getElementById("and1").value = year+1;
 					document.getElementById("and2").value = year+2;
@@ -206,14 +206,14 @@
 					document.getElementById("and8").value = year+8;
 					document.getElementById("and9").value = year+9;
 					document.getElementById("and10").value = year+10;
-					
-					
+
+
 					//update selected month and day depending on current date
 					var month = parseInt(info.month);
 					var day = parseInt(info.date.substring(8,10));
 					document.getElementById("months").selectedIndex = month-1;
 					document.getElementById("days").selectedIndex = day-1;
-					
+
 				}
 
 			}
@@ -221,23 +221,23 @@
 			request2.send();
 			console.log("4 - Request sent");
 		}
-		
+
 		function fillEvents(){
 			//need to access what day it is TODAY
-			
-			//access array with event values and insert into calendar 
+
+			//access array with event values and insert into calendar
 			document.getElementById("event0").innerHTML = "event from database";
 			//console.log("events length is..."+events.length);
-			var num_events = events.length; 
+			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				//if month, day and year match today put in event0
-				
+
 			}
-			
+
 		}
-		
-		function Event(name, location, description, day, month, year, 
-				       timeStartHour, timeStartMinute, timeEndHour, 
+
+		function Event(name, location, description, day, month, year,
+				       timeStartHour, timeStartMinute, timeEndHour,
 					   timeEndMinute, start_am_or_pm, end_am_or_pm)
 		{
 			this.name=name;
@@ -254,14 +254,14 @@
 			this.end_am_or_pm=end_am_or_pm;
 		}
 
-		
+
 		//make javascript array from php arrays
 		events = new Array();
 		later_events = new Array();
-		
+
 		<?php
 		//php array definitions, for global access
-		$names = array(); 
+		$names = array();
 		$locals = array();
 		$descrips = array();
 		$days = array();
@@ -274,9 +274,9 @@
 		$samorpm = array();
 		$eamorpm = array();
 		?>
-		
+
 		<?php test($names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
-		
+
 		var n = <?php echo json_encode($names) ?>;
 		var l = <?php echo json_encode($locals) ?>;
 		var d = <?php echo json_encode($descrips) ?>;
@@ -289,27 +289,29 @@
 		var e2 = <?php echo json_encode($tendmin) ?>;
 		var sa = <?php echo json_encode($samorpm) ?>;
 		var ea = <?php echo json_encode($eamorpm) ?>;
-		
+
 		var n_length = <?php echo json_encode(sizeof($names), JSON_HEX_TAG); ?>;
-		
+
 		for(var i = 0; i < n_length; i++){
 			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
 		}
 		console.log(events.length);
-		
-		
-		
+
+
+
 
 	</script>
 </head>
 
 
 <body onload="accessAPI()">
-	
+
 	<p>
 	<div class="row">
 	<div class="column lef" >
+	<div id="title">
 	Calm & Collected Calendar
+</div>
 </div>
 <div class="column righ">
 	<?php  if (isset($_SESSION['user'])) : ?>
@@ -320,15 +322,15 @@
 		</small>
 
 	<?php endif ?>
-	
+
 	<?php  if (!isset($_SESSION['user'])) : ?>
-		
+
 		<small>
 			<a href="sign_in.php" style="color:#FF0000;">Sign In</a>
 		</small>
 
 	<?php endif ?>
-	
+
 </div>
 </div>
 </p>
@@ -536,7 +538,7 @@
 			</p>
 			<p id = "location">Location <input type="text" name = "location"></p>
 			<p id="description">Desription: <br><br><input type="text" name = "description"></p>
-			<input type = "submit" value = "Make Event" name="event_btn">
+			<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
 		</form>
 		</div>
 	</div>
