@@ -13,27 +13,13 @@
 <style>
 
 body {
-  background-image: url('background.jpg');
+  background-image: url('background1.jpg');
   background-attachment: fixed;
   background-size: 100%;
   position: relative;
-}
-a:link, a:visited {
-	position: relative;
-	font-size: 18px;
-	margin-left: 20px;
-  padding: 10px 20px;
-  text-align: center;
-	/* background-color: #909b55; */
-	color: #909b55;
-  text-decoration: none;
-  display: inline-block;
+  background-position: center;
 }
 
-a:hover, a:active {
-  background-color: #909b55;
-  color: #19252d;
-}
 .login-form {
     width: 340px;
     margin: 50px auto;
@@ -44,18 +30,100 @@ a:hover, a:active {
     background: #f7f7f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
+    background-color: #F0F8FF;
 }
 .login-form h2 {
     margin: 0 0 15px;
+    background-color: #F0F8FF;
 }
-.form-control, .btn {
+.form-control{
     min-height: 38px;
-    border-radius: 2px;
+    border-width: .1px;
+    position: relative;
+  	font-size: 18px;
+  	/* margin-left: 20px; */
+    padding: 10px 20px;
+    text-align: center;
+  	/* background-color: #1D5B7A; */
+  	color: #1D5B7A;
+    text-decoration: none;
+    outline: none;
+    border-color: #000;
+    /* -internal-light-dark(#F4AF74, #F4AF74); */
+    /* display: inline-block; */
+  	/* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
+    margin-bottom: 5px;
 }
+
+
 .btn {
     font-size: 15px;
     font-weight: bold;
+    position: relative;
+  	font-size: 18px;
+  	/* margin-left: 20px; */
+    padding: 10px 20px;
+    text-align: center;
+  	background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+  	color: #1D5B7A;
+    text-decoration: none;
+    display: inline-block;
+  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: Spectral, serif;
+    margin-top: 10px;
+    border-color: rgba(0,0,0,0);
 }
+
+.btn:hover {
+  background-color: #1D5B7A;
+  color: #F0F8FF;
+}
+
+.text-center {
+  text-align: center;
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#signIn{
+  font-family: Rubik, sans-serif;
+}
+
+input.form-control{
+  font-family: Spectral, serif;
+  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.form-group {
+  text-align: center;
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a:link, a:visited {
+	position: relative;
+	font-size: 18px;
+	/* margin-left: 20px; */
+  padding: 10px 20px;
+  text-align: center;
+	/* background-color: #1D5B7A; */
+	color: #1D5B7A;
+  text-decoration: none;
+  display: inline-block;
+  /* background-color: #F4AF74; */
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+a:hover, a:active {
+  background-color: #1D5B7A;
+  color: #F0F8FF;
+}
+
 </style>
 </head>
 <body>

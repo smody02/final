@@ -11,119 +11,119 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
+
 body {
-	background-image: url('background.jpg');
-	background-attachment: fixed;
-	background-size: 100%;
-	position: relative;
+  background-image: url('background1.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+  position: relative;
+  background-position: center;
 }
+
+.signup-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+}
+.signup-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background-color: #F0F8FF;
+}
+.signup-form h2 {
+    margin: 0 0 15px;
+    background-color: #F0F8FF;
+}
+.form-control{
+    min-height: 38px;
+    border-width: .1px;
+    position: relative;
+  	font-size: 18px;
+  	/* margin-left: 20px; */
+    padding: 10px 20px;
+    text-align: center;
+  	/* background-color: #1D5B7A; */
+  	color: #1D5B7A;
+    text-decoration: none;
+    outline: none;
+    border-color: #000;
+    /* -internal-light-dark(#233C63, #233C63); */
+    /* display: inline-block; */
+  	/* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
+    margin-bottom: 5px;
+}
+
+
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+  	font-size: 18px;
+  	/* margin-left: 20px; */
+    padding: 10px 20px;
+    text-align: center;
+  	background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+  	color: #1D5B7A;
+    text-decoration: none;
+    display: inline-block;
+  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: Spectral, serif;
+    margin-top: 10px;
+    border-color: rgba(0,0,0,0);
+}
+
+.btn:hover {
+  background-color: #1D5B7A;
+  color: #F0F8FF;
+}
+
+.text-center {
+  text-align: center;
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#signIn{
+  font-family: Rubik, sans-serif;
+}
+
+input.form-control{
+  font-family: Spectral, serif;
+  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.form-group {
+  text-align: center;
+	/* width: 90%; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
 a:link, a:visited {
 	position: relative;
 	font-size: 18px;
-	margin-left: 20px;
+	/* margin-left: 20px; */
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #909b55; */
-	color: #909b55;
+	/* background-color: #1D5B7A; */
+	color: #1D5B7A;
   text-decoration: none;
   display: inline-block;
+  /* background-color: #233C63; */
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 a:hover, a:active {
-  background-color: #909b55;
-  color: #19252d;
+  background-color: #1D5B7A;
+  color: #F0F8FF;
 }
-div#plsCenter {
-	position:relative;
-	border: 2px solid #384267;
-	background-color: #384267;
-	font-size: 30px;
-	margin-top: 20px;
-	font-weight: bolder;
-	color: #FFF;
-	text-align: center;
-}
-/* .form-control {
-	height: 41px;
-	background: #f2f2f2;
-	box-shadow: none !important;
-	border: none;
-}
-.form-control:focus {
-	background: #e2e2e2;
-}
-.form-control, .btn {
-	border-radius: 3px;
-} */
-.signup-form {
-	width: 400px;
-	margin: 30px auto;
-}
-.signup-form form {
-	color: #999;
-	border-radius: 3px;
-	margin-bottom: 15px;
-	background: #fff;
-	/* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
-	padding: 30px;
-	/* position:relative; */
-	border: 2px solid #384267;
-	background-color: #384267;
-	font-size: 30px;
-	margin-top: 20px;
-	font-weight: bolder;
-	color: #FFF;
-	text-align: center;
-}
-/* .signup-form h2  {
-	color: #333;
-	font-weight: bold;
-	margin-top: 0;
-}
-.signup-form hr  {
-	margin: 0 -30px 20px;
-}
-.signup-form .form-group {
-	margin-bottom: 20px;
-}
-.signup-form input[type="checkbox"] {
-	margin-top: 3px;
-}
-.signup-form .row div:first-child {
-	padding-right: 10px;
-}
-.signup-form .row div:last-child {
-	padding-left: 10px;
-}
-.signup-form .btn {
-	font-size: 16px;
-	font-weight: bold;
-	background: #3598dc;
-	border: none;
-	min-width: 140px;
-}
-.signup-form .btn:hover, .signup-form .btn:focus {
-	background: #2389cd !important;
-	outline: none;
-}
-.signup-form a {
-	color: #fff;
-	text-decoration: underline;
-}
-.signup-form a:hover {
-	text-decoration: none;
-}
-.signup-form form a {
-	color: #3598dc;
-	text-decoration: none;
-}
-.signup-form form a:hover {
-	text-decoration: underline;
-}
-.signup-form .hint-text  {
-	padding-bottom: 15px;
-	text-align: center;
-} */
+
 </style>
 </head>
 <body>
