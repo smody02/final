@@ -1,25 +1,33 @@
 body,html {
-		font-size: 18px;
-		font-family: "Helvetica Neue", "Arial", sans-serif;
+		font-size: 20px;
+		font-family: Spectral, serif;
 		/* background-color: #f9faff ; */
     color: #19252d;
     margin-bottom: 30px;
 	}
 	* {
   box-sizing: border-box;
+
 }
 
+div.title{
+	margin-left: 10px;
+	/* background-color: rgba(255, 255, 255, .4);
+	 */
+	 font-family: Rubik, sans-serif;
+}
 
 /* inspirational quote section   */
 .text {
 	font-size: 20px;
 	text-align: center;
-	background-color: #becfda;
+	background-color: #F2EFEE;
 	height:15%;
 	padding: 20px;
 	box-sizing:border-box;
 	margin-top: 10px;
-	font-weight: bolder;
+	font-weight: lighter;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -27,20 +35,20 @@ body,html {
 /* continder fot the calendar */
 div#plsCenter {
 	position:relative;
-	border: 2px solid #384267;
-	background-color: #384267;
+	border: 2px solid #F0F8FF;
+	background-color: #F0F8FF;
 	font-size: 30px;
 	margin-top: 20px;
 	font-weight: bolder;
-	color: #FFF;
+	/* color: #FFF; */
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 	text-align: center;
 }
 
 div#plsCenterGreen {
 	position:relative;
-	border: 2px solid #E4edb7;
-	background-color: #E4edb7;
+	border: 2px solid #F0F8FF;
+	background-color: #F0F8FF;
 	font-size: 30px;
 	margin-top: 20px;
 	font-weight: bolder;
@@ -50,7 +58,7 @@ div#plsCenterGreen {
 }
 /* the month adn year of the calendar */
 div#monthAndYear.card-header{
-	background-color: #b66292;
+	background-color: #F4AF74;
 	font-size: 30px;
 	margin-top: 20px;
 	font-weight: bolder;
@@ -58,6 +66,7 @@ div#monthAndYear.card-header{
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 div.card{
@@ -75,7 +84,7 @@ div.card{
 /* button styling  */
 
 button{
-  color: #909b55;
+  color: #1D5B7A;
 	background-color: #f9faff;
   border: none;
   padding: 5px 5px;
@@ -88,7 +97,7 @@ button{
 }
 
 button:hover{
-	background-color: #909b55;
+	background-color: #1D5B7A;
   border: none;
   color: #fbfdfe;
 
@@ -133,14 +142,15 @@ a:link, a:visited {
 	margin-left: 20px;
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #909b55; */
-	color: #909b55;
+	/* background-color: #1D5B7A; */
+	color: #1D5B7A;
   text-decoration: none;
   display: inline-block;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 a:hover, a:active {
-  background-color: #909b55;
+  background-color: #1D5B7A;
   color: #19252d;
 }
 
@@ -181,18 +191,20 @@ a:hover, a:active {
 	/* margin-top: 20px; */
 	padding-top: 10px;
 	padding-left: 10px;
-	border: 2px solid #E4edb7;
+	border: 2px solid #F0F8FF;
 	height: 450px;
 	background-color: rgba(255, 255, 255, .4);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .listedForm{
 	/* margin-top: 20px; */
 	padding-top: 10px;
 	padding-left: 10px;
-	border: 2px solid #384267;
+	border: 2px solid #F0F8FF;
 	height: 450px;
 	background-color: rgba(255, 255, 255, .4);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 /* title: calm and collected calendar */
 .lef {
@@ -245,13 +257,14 @@ a:hover, a:active {
 }
 
 th {
-  border: 2px solid #b66292;
+  border: 2px solid #F4AF74;
   text-align: left;
   padding: 5px;
+	background-color: rgba(255, 255, 255, .4);
 }
 
 td{
-  border: 2px solid #b66292;
+  border: 2px solid #F4AF74;
   text-align: left;
   padding: 5px;
 	height: 500px;
@@ -263,5 +276,25 @@ table {
 	margin-left: auto;
 	margin-right: auto;
   width: 90%;
-	/* border-collapse: collapse; */
+	border-collapse: collapse;
+	/* border-collapse-left: none;   */
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+input#makeEvent:link, input#makeEvent:visited{
+	position: relative;
+	font-size: 18px;
+	margin-left: 20px;
+  padding: 10px 20px;
+  text-align: center;
+	/* background-color: #1D5B7A; */
+	color: #1D5B7A;
+  text-decoration: none;
+  display: inline-block;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+input#makeEvent:hover, input#makeEvent:active {
+  background-color: #1D5B7A;
+  color: #fff;
 }
