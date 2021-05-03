@@ -184,12 +184,39 @@ function event(){
 
 function printEvent() {
 	global $conn;
-	$query = "SELECT events.name FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
+	$query = "SELECT * FROM events INNER JOIN users ON events.userID = users.id WHERE userID = " . $_SESSION['user']['id'];
+    //$numres = "SELECT COUNT(events.name) FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
 	$result = $conn->query($query);
 
 	$event = $result->fetch_assoc();
 
+    //echo(typeof $event);
 	echo($event["name"]);
+
+}
+
+
+//need to put all events into php arrays for current user
+function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstarthour, &$tstartmin, &$tendhour, &$tendmin, &$samorpm, &$eamorpm){
+    global $conn;
+	
+    $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'];
+	if($result = $conn->query($query)){
+        while($row = $result->fetch_assoc()){
+            array_push($names, $row["name"]);
+			array_push($locals, $row["location"]);
+            array_push($descrips, $row["description"]);
+            array_push($days, $row["day"]);
+            array_push($months, $row["month"]);
+            array_push($years, $row["year"]);
+            array_push($tstarthour, $row["timeStartHour"]);
+            array_push($tstartmin, $row["timeStartMinute"]);
+            array_push($tendhour, $row["timeEndHour"]);
+            array_push($tendmin, $row["timeEndMinute"]);
+            array_push($samorpm, $row["start_am_or_pm"]);
+            array_push($eamorpm, $row["end_am_or_pm"]);
+        }
+    }
 
 }
 
