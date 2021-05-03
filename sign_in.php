@@ -42,7 +42,7 @@ a:hover, a:active {
 .login-form form {
     margin-bottom: 15px;
     background: #f7f7f7;
-    /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
 .login-form h2 {
