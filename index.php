@@ -18,11 +18,14 @@
 	
 	<script language="javascript">
 	
+		var this_day; 
+		var this_month;
+		var this_year;
+	
 		/* ACCESS APIs FUNCTION: Calls quote API and Date&Time API */
 		function accessAPI(){
 			getQuote();
 			dateNtime();
-			
 			fillEvents();
 		}
 	
@@ -220,8 +223,16 @@
 		}
 		
 		function fillEvents(){
+			//need to access what day it is TODAY
+			
 			//access array with event values and insert into calendar 
 			document.getElementById("event0").innerHTML = "event from database";
+			//console.log("events length is..."+events.length);
+			var num_events = events.length; 
+			for(var i = 0; i < events.length; i++){
+				//if month, day and year match today put in event0
+				
+			}
 			
 		}
 		
@@ -242,9 +253,11 @@
 			this.start_am_or_pm=start_am_or_pm;
 			this.end_am_or_pm=end_am_or_pm;
 		}
+
 		
 		//make javascript array from php arrays
 		events = new Array();
+		later_events = new Array();
 		
 		<?php
 		//php array definitions, for global access
@@ -263,8 +276,6 @@
 		?>
 		
 		<?php test($names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
-		
-		
 		
 		var n = <?php echo json_encode($names) ?>;
 		var l = <?php echo json_encode($locals) ?>;
@@ -285,6 +296,9 @@
 			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
 		}
 		console.log(events.length);
+		
+		
+		
 
 	</script>
 </head>
