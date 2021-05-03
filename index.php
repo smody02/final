@@ -7,7 +7,7 @@
 	<link rel='stylesheet' type="text/css" href="style.css" />
 	<style type="text/css">
 	body {
-		background-image: url('background.jpg');
+		background-image: url('background1.jpg');
 		background-attachment: fixed;
 		background-size: 100%;
 		position: relative;

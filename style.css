@@ -2,7 +2,7 @@ body,html {
 		font-size: 20px;
 		font-family: Spectral, serif;
 		/* background-color: #f9faff ; */
-    color: #19252d;
+    color: #233C63;
     margin-bottom: 30px;
 	}
 	* {
@@ -21,7 +21,7 @@ div.title{
 .text {
 	font-size: 20px;
 	text-align: center;
-	background-color: #F2EFEE;
+	background-color: #F0F8FF;
 	height:15%;
 	padding: 20px;
 	box-sizing:border-box;
@@ -58,7 +58,8 @@ div#plsCenterGreen {
 }
 /* the month adn year of the calendar */
 div#monthAndYear.card-header{
-	background-color: #F4AF74;
+	background-color: #233C63;
+	color: #fff;
 	font-size: 30px;
 	margin-top: 20px;
 	font-weight: bolder;
@@ -139,7 +140,7 @@ form#form{
 a:link, a:visited {
 	position: relative;
 	font-size: 18px;
-	margin-left: 20px;
+	/* margin-left: 20px; */
   padding: 10px 20px;
   text-align: center;
 	/* background-color: #1D5B7A; */
@@ -164,7 +165,7 @@ a:hover, a:active {
 /* calendar section */
 .left {
   width: 49%;
-	outline-color: #19252d;
+	outline-color: #233C63;
 
 
 }
@@ -184,7 +185,7 @@ a:hover, a:active {
 .aE{
 	margin-top: 20px;
 	text-align: center;
-  border: 2px solid #19252D;
+  border: 2px solid #233C63;
 }
 /* //events of the day section */
 #listedEvents{
@@ -209,10 +210,10 @@ a:hover, a:active {
 /* title: calm and collected calendar */
 .lef {
   width: 70%;
-	outline-color: #19252d;
+	outline-color: #233C63;
 	font-size: 48px;
   text-align: left;
-	color: #19252d;
+	color: #233C63;
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
@@ -222,20 +223,20 @@ a:hover, a:active {
 /* welcome, ____! and logout button  */
 .righ {
   width: 29%;
-	outline-color: #19252d;
+	outline-color: #233C63;
 	font-size: 24px;
   text-align: right;
-	color: #19252d;
+	color: #233C63;
 	padding-top: 35px;
 	padding-bottom: 50px;
 }
 
 .columnForm{
 	width: 70%;
-	outline-color: #19252d;
+	outline-color: #233C63;
 	font-size: 48px;
   text-align: left;
-	color: #19252d;
+	color: #233C63;
 	font-weight: bolder;
 	padding-top: 35px;
 	padding-bottom: 50px;
@@ -249,22 +250,22 @@ a:hover, a:active {
 }
 
 .roww{
-	outline-color: #19252d;
+	outline-color: #233C63;
 	font-size: 24px;
 	text-align: right;
-	color: #19252d;
+	color: #233C63;
 	padding-top: 35px;
 }
 
 th {
-  border: 2px solid #F4AF74;
+  border: 2px solid #233C63;
   text-align: left;
   padding: 5px;
 	background-color: rgba(255, 255, 255, .4);
 }
 
 td{
-  border: 2px solid #F4AF74;
+  border: 2px solid #233C63;
   text-align: left;
   padding: 5px;
 	height: 500px;
