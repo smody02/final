@@ -14,12 +14,19 @@
 	}
 
 	</style>
-	<script>
+	
+	
+	<script language="javascript">
+	
+		var this_day; 
+		var this_month;
+		var this_year;
 	
 		/* ACCESS APIs FUNCTION: Calls quote API and Date&Time API */
 		function accessAPI(){
 			getQuote();
 			dateNtime();
+			fillEvents();
 		}
 	
 		/* GET QUOTE FUNCTION: Accesses API */
@@ -204,8 +211,8 @@
 					//update selected month and day depending on current date
 					var month = parseInt(info.month);
 					var day = parseInt(info.date.substring(8,10));
-					document.getElementById("months").selectedIndex = month;
-					document.getElementById("days").selectedIndex = day;
+					document.getElementById("months").selectedIndex = month-1;
+					document.getElementById("days").selectedIndex = day-1;
 					
 				}
 
@@ -215,11 +222,90 @@
 			console.log("4 - Request sent");
 		}
 		
+		function fillEvents(){
+			//need to access what day it is TODAY
+			
+			//access array with event values and insert into calendar 
+			document.getElementById("event0").innerHTML = "event from database";
+			//console.log("events length is..."+events.length);
+			var num_events = events.length; 
+			for(var i = 0; i < events.length; i++){
+				//if month, day and year match today put in event0
+				
+			}
+			
+		}
+		
+		function Event(name, location, description, day, month, year, 
+				       timeStartHour, timeStartMinute, timeEndHour, 
+					   timeEndMinute, start_am_or_pm, end_am_or_pm)
+		{
+			this.name=name;
+			this.location=location;
+			this.description=description;
+			this.day=day;
+			this.month=month;
+			this.year=year;
+			this.timeStartHour=timeStartHour;
+			this.timeStartMinute=timeStartMinute;
+			this.timeEndHour=timeEndHour;
+			this.timeEndMinute=timeEndMinute;
+			this.start_am_or_pm=start_am_or_pm;
+			this.end_am_or_pm=end_am_or_pm;
+		}
+
+		
+		//make javascript array from php arrays
+		events = new Array();
+		later_events = new Array();
+		
+		<?php
+		//php array definitions, for global access
+		$names = array(); 
+		$locals = array();
+		$descrips = array();
+		$days = array();
+		$months = array();
+		$years = array();
+		$tstarthour = array();
+		$tstartmin = array();
+		$tendhour = array();
+		$tendmin = array();
+		$samorpm = array();
+		$eamorpm = array();
+		?>
+		
+		<?php test($names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
+		
+		var n = <?php echo json_encode($names) ?>;
+		var l = <?php echo json_encode($locals) ?>;
+		var d = <?php echo json_encode($descrips) ?>;
+		var d2 = <?php echo json_encode($days) ?>;
+		var m = <?php echo json_encode($months) ?>;
+		var y = <?php echo json_encode($years) ?>;
+		var s = <?php echo json_encode($tstarthour) ?>;
+		var s2 = <?php echo json_encode($tstartmin) ?>;
+		var e = <?php echo json_encode($tendhour) ?>;
+		var e2 = <?php echo json_encode($tendmin) ?>;
+		var sa = <?php echo json_encode($samorpm) ?>;
+		var ea = <?php echo json_encode($eamorpm) ?>;
+		
+		var n_length = <?php echo json_encode(sizeof($names), JSON_HEX_TAG); ?>;
+		
+		for(var i = 0; i < n_length; i++){
+			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
+		}
+		console.log(events.length);
+		
+		
+		
+
 	</script>
 </head>
 
 
 <body onload="accessAPI()">
+	
 	<p>
 	<div class="row">
 	<div class="column lef" >
