@@ -71,8 +71,8 @@ div.lef{
   	/* margin-left: 20px; */
     padding: 10px 20px;
     text-align: left;
-  	/* background-color: #525B71; */
-  	color: #525B71;
+  	/* background-color: #533D61; */
+  	color: #533D61;
     text-decoration: none;
     outline: none;
     border-color: #000;
@@ -93,7 +93,7 @@ div.lef{
     text-align: center;
   	background-color: rgba(0, 0, 0, 0);
     border-radius: 0px;
-  	color: #525B71;
+  	color: #533D61;
     text-decoration: none;
     display: inline-block;
   	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -103,7 +103,7 @@ div.lef{
 }
 
 .btn:hover {
-  background-color: #525B71;
+  background-color: #533D61;
   color: #F0F8FF;
 }
 
@@ -138,8 +138,8 @@ a:link, a:visited {
 	/* margin-left: 20px; */
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #525B71; */
-	color: #525B71;
+	/* background-color: #533D61; */
+	color: #533D61;
   text-decoration: none;
   display: inline-block;
   /* background-color: #233C63; */
@@ -148,7 +148,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  background-color: #525B71;
+  background-color: #533D61;
   color: #F0F8FF;
 }
 

@@ -116,7 +116,7 @@
 	/* button styling  */
 
 	button{
-	  color: #525B71;
+	  color: #533D61;
 		background-color: #f9faff;
 	  border: none;
 	  padding: 5px 5px;
@@ -129,7 +129,7 @@
 	}
 
 	button:hover{
-		background-color: #525B71;
+		background-color: #533D61;
 		border: none;
 		color: #fbfdfe;
 	}
@@ -172,15 +172,15 @@
 		/* margin-left: 20px; */
 	  padding: 10px 20px;
 	  text-align: center;
-		/* background-color: #525B71; */
-		color: #525B71;
+		/* background-color: #533D61; */
+		color: #533D61;
 	  text-decoration: none;
 	  display: inline-block;
 		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 	}
 
 	a:hover, a:active {
-	  background-color: #525B71;
+	  background-color: #533D61;
 	  color: #F0F8FF;
 	}
 
@@ -332,15 +332,15 @@
 		margin-left: 20px;
 	  padding: 10px 20px;
 	  text-align: center;
-		/* background-color: #525B71; */
-		color: #525B71;
+		/* background-color: #533D61; */
+		color: #533D61;
 	  text-decoration: none;
 	  display: inline-block;
 		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 	}
 
 	input#makeEvent:hover, input#makeEvent:active {
-	  background-color: #525B71;
+	  background-color: #533D61;
 	  color: #fff;
 	}
 
@@ -393,7 +393,7 @@
 	    text-align: center;
 	  	background-color: rgba(0, 0, 0, 0);
 	    border-radius: 0px;
-	  	color: #525B71;
+	  	color: #533D61;
 	    text-decoration: none;
 	    display: inline-block;
 	  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -409,7 +409,7 @@
 
 
 	input#makeEvent:hover {
-	  background-color: #525B71;
+	  background-color: #533D61;
 	  color: #F0F8FF;
 	}
 
@@ -457,7 +457,7 @@ cursor: pointer;
 -moz-user-select: none;
 -ms-user-select: none;
 user-select: none;
-color: #525B71;
+color: #533D61;
 background-color: rgba(0,0,0,0); 
 border-radius: 50%;
 background: rgba(0,0,0,0); 
@@ -468,7 +468,7 @@ text-align: center;
 
 .popup:hover{
 	color: #F0F8FF;
-	background-color: #525B71; 
+	background-color: #533D61; 
 	/* border-radius: 50%; */
 	width: 20px;
 	height: 20px;
