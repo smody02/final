@@ -192,25 +192,11 @@ function event(){
 	}
 }
 
-function printEvent() {
-	global $conn;
-	$query = "SELECT * FROM events INNER JOIN users ON events.userID = users.id WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY start_am_or_pm, timeStartHour, timeStartMinute ASC";
-    //$numres = "SELECT COUNT(events.name) FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
-	$result = $conn->query($query);
-
-	$event = $result->fetch_assoc();
-
-    //echo(typeof $event);
-	echo($event["name"]);
-
-}
-
-
 //need to put all events into php arrays for current user
 function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstarthour, &$tstartmin, &$tendhour, &$tendmin, &$samorpm, &$eamorpm){
     global $conn;
 	
-    $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY start_am_or_pm, timeStartHour, timeStartMinute ASC";
+    $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY year, month, day, start_am_or_pm, timeStartHour, timeStartMinute ASC";
 	if($result = $conn->query($query)){
         while($row = $result->fetch_assoc()){
             array_push($names, $row["name"]);
