@@ -7,12 +7,10 @@
 	<link rel='stylesheet' type="text/css" href="style2.css" />
 	<style type="text/css">
 	body {
-		background-image: url('background1.jpg');
-	    background-attachment: fixed;
-	    background-size: 100%;
-	    position: relative;
-	    background-position: center;
-	    font-family: Optima;
+		background-image: url("background1.jpg");
+		background-attachment: fixed;
+		background-size: 100%;
+		position: relative;
 		color: #332622;
 	}
 
@@ -20,402 +18,6 @@
 		color: #332622;
 	}
 
-	body,html {
-			font-size: 20px;
-			font-family: Optima;
-
-			/* background-color: #f9faff ; */
-	    color: #332622;
-	    margin-bottom: 30px;
-		}
-		* {
-	  box-sizing: border-box;
-		color: #332622;
-
-	}
-
-	/* div#title{
-		margin-left: 20px;
-		font-family: Optima;
-		/* background-color: rgba(255, 255, 255, .4);
-		 */
-		 /* font-family: Rubik, sans-serif; */
-		 /* color: #332622; */
-
-		 /* Font Family: “myriad-pro-1”, “myriad-pro-2”, HelveticaNeue, Helvetica, Arial, serif;
-		 Style:normal;
-		Weight:700;
-		Font Size:50px;
-		Line Height:54px; */
-
-
-	/* inspirational quote section   */
-	.text {
-		font-size: 20px;
-		text-align: center;
-		background-color: #F0F8FF;
-		height:15%;
-		padding: 20px;
-		box-sizing:border-box;
-		/* margin-top: 10px; */
-		font-weight: lighter;
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		/* color: #332622; */
-	}
-
-
-
-	/* continder fot the calendar */
-	div#plsCenter {
-		position:relative;
-		border: 2px solid #F0F8FF;
-		background-color: #F0F8FF;
-		font-size: 30px;
-		margin-top: 20px;
-		font-weight: bolder;
-		/* color: #FFF; */
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		text-align: center;
-	}
-
-	div#plsCenterGreen {
-		position:relative;
-		border: 2px solid #F0F8FF;
-		background-color: #F0F8FF;
-		font-size: 30px;
-		margin-top: 20px;
-		font-weight: bolder;
-		/* color: #FFF; */
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		text-align: center;
-	}
-	/* the month adn year of the calendar */
-	div#monthAndYear.card-header{
-		background-color: #233C63;
-		color: #F0F8FF;
-		font-size: 30px;
-		margin-top: 20px;
-		font-weight: bolder;
-		text-align: center;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	div.card{
-	}
-
-	/* the actual calendar itself */
-	/* #calendar.table{
-	  top: 50%;
-	  width: 50%;
-		margin-left: auto;
-		margin-right: auto;
-	  text-align: center;
-		font-size: 24px;
-	} */
-	/* button styling  */
-
-	button{
-	  color: #525B71;
-		background-color: #f9faff;
-	  border: none;
-	  padding: 5px 5px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 14px;
-	  width: 70px;
-	  margin: 0 auto;
-	}
-
-	button:hover{
-		background-color: #525B71;
-	  border: none;
-	  color: #fbfdfe;
-
-	}
-
-
-	div.form-inline{
-	  top: 50%;
-	  width: 100%;
-	  text-align: center;
-		font-size: 20px;
-		outline-color: #384267;
-	}
-
-	form#form{
-		/* padding-left: 15px; */
-		outline-color: #384267;
-	}
-
-	#all_day{
-		top: 20px;
-		left: 20px;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		background: #383D36;
-	}
-
-	#specified_time{
-		top: 20px;
-		left: 20px;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		background: #383D36;
-	}
-
-	/* button formatting */
-	a:link, a:visited {
-		position: relative;
-		font-size: 18px;
-		/* margin-left: 20px; */
-	  padding: 10px 20px;
-	  text-align: center;
-		/* background-color: #525B71; */
-		color: #525B71;
-	  text-decoration: none;
-	  display: inline-block;
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	a:hover, a:active {
-	  background-color: #525B71;
-	  color: #F0F8FF;
-	}
-
-	/* hostd the colemsn */
-	.column {
-	  float: left;
-	  padding: 10px;
-		/* margin: 35px; */
-	}
-
-	/* calendar section */
-	.left {
-	  width: 49%;
-		outline-color: #332622;
-
-
-	}
-	/* upcoming event, add event, adn events of the day sections */
-	.right {
-	  width: 50%;
-	}
-
-	/* upcoming event section  */
-	.uE{
-		text-align: center;
-	  border: 2px solid #384267;
-		padding-bottom: 10px;
-	}
-
-	/* add event button section */
-	.aE{
-		margin-top: 20px;
-		text-align: center;
-	  border: 2px solid #242224;
-	}
-	/* //events of the day section */
-	#listedEvents{
-		/* margin-top: 20px; */
-		padding-top: 10px;
-		padding-left: 10px;
-		/* border: 2px solid #F0F8FF; */
-		height: 450px;
-		background-color: rgba(255, 255, 255, .4);
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	.listedForm{
-		/* margin-top: 20px; */
-		padding-top: 10px;
-		padding-left: 5%;
-		/* border: 2px solid #F0F8FF; */
-		height: 450px;
-		background-color: rgba(255, 255, 255, .4);
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-	/* title: calm and collected calendar */
-	.lef {
-	  width: 70%;
-		outline-color: #242224;
-		/* font-size: 48px; */
-	  text-align: left;
-		/* color: #242224; */
-		font-weight: bolder;
-		padding-top: 30px;
-		padding-bottom: 45px;
-		padding-left: 5%;
-		/* margin-bottom: 10px; */
-
-		Style:normal;
-	 	weight:700;
-	 	font-Size:56px;
-	 	line-Height:54px;
-		/* margin-top: auto;
-		margin-bottom: auto; */
-	}
-
-	/* welcome, ____! and logout button  */
-	.righ {
-		padding-top: 15px;
-	  width: 29%;
-		outline-color: #242224;
-		/* font-size: 24px; */
-	  text-align: right;
-		/* color: #242224; */
-		padding-top: 30px;
-		padding-bottom: 45px;
-		padding-right: 5%;
-		/* margin-top: auto;
-		margin-bottom: auto; */
-	}
-
-	.columnForm{
-		width: 70%;
-		outline-color: #242224;
-		font-size: 48px;
-	  text-align: left;
-		color: #242224;
-		font-weight: bolder;
-		padding-top: 35px;
-		padding-bottom: 50px;
-	}
-
-	.row{
-		position: relative;
-		height: 100%;
-		/* margin-top: 10px; */
-		padding-bottom: 10px;
-	}
-
-	.roww{
-		outline-color: #242224;
-		font-size: 24px;
-		text-align: right;
-		color: #242224;
-		padding-top: 35px;
-	}
-
-	th {
-	  border: 2px solid #233C63;
-	  text-align: left;
-	  padding: 5px;
-		background-color: rgba(255, 255, 255, .4);
-		text-align: center;
-
-	}
-
-	td{
-	  border: 2px solid #233C63;
-	  text-align: left;
-	  padding: 5px;
-		height: 500px;
-		width: 14%;
-		background-color: rgba(255, 255, 255, .4);
-		vertical-align: text-top;
-	}
-
-	table {
-		margin-left: auto;
-		margin-right: auto;
-	  width: 90%;
-		border-collapse: collapse;
-		/* border-collapse-left: none;   */
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	input#makeEvent:link, input#makeEvent:visited{
-		position: relative;
-		font-size: 18px;
-		margin-left: 20px;
-	  padding: 10px 20px;
-	  text-align: center;
-		/* background-color: #525B71; */
-		color: #525B71;
-	  text-decoration: none;
-	  display: inline-block;
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	input#makeEvent:hover, input#makeEvent:active {
-	  background-color: #525B71;
-	  color: #fff;
-	}
-
-	#user{
-		padding-right: 30px;
-	}
-
-	/* FORM STYLEEEE!!! */
-
-	p#name{
-		font-weight: bold;
-		/* margin-left: auto;
-		margin-right: auto; */
-	}
-
-	span#notBold{
-		font-weight: normal;
-		padding-top: 9px;
-	}
-
-	p#time{
-		font-weight: bold;
-		padding-bottom: 2px;
-	}
-
-	select,input{
-		font-family: Optima;
-		/* font-weight: bold; */
-		font-size: 18px;
-		background-color: rgba(255,255,255,.3);
-		border-width: .1px;
-	}
-
-	p#location, p#description{
-		font-weight: bold;
-	}
-
-
-	form#form{
-		 position: relative;
-	}
-
-	input#makeEvent {
-	    font-size: 15px;
-	    font-weight: bold;
-	    position: relative;
-	  	font-size: 18px;
-	  	/* margin-left: 20px; */
-	    padding: 10px 20px;
-	    text-align: center;
-	  	background-color: rgba(0, 0, 0, 0);
-	    border-radius: 0px;
-	  	color: #525B71;
-	    text-decoration: none;
-	    display: inline-block;
-	  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	    font-family: Optima;
-	    margin-top: 10px;
-	    border-color: rgba(0,0,0,0);
-			margin-left: auto;
-			margin-right: auto;
-			position: absolute;
-			left: 45%;
-
-	}
-
-
-	input#makeEvent:hover {
-	  background-color: #525B71;
-	  color: #F0F8FF;
-	}
 
 
 	</style>
@@ -630,12 +232,12 @@
 
 
 		}
-
+		
 		function checkOverflowMonth(day, month, addValue) {
 			d = parseInt(day);
 			m = parseInt(month);
 			add = parseInt(addValue);
-
+			
 			if (m == 2){
 				if (d + add > 28) {
 					return (d + add) % 28;
@@ -666,7 +268,7 @@
 			day5 = "";
 			day6 = "";
 			otherEvents = "";
-
+			
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				//if month, day and year match today put in event0
@@ -674,7 +276,7 @@
 					//ORIGINAL CODE
 					// if(events[i].year == year){
 					// 	if(month == events[i].month){
-
+							
 							var check = false;
 							if (month == 12) {
 								var mod = 1;
@@ -682,12 +284,30 @@
 							else {
 								var mod = 0;
 							}
-
+							
 							if(events[i].day == day) {
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day0 += events[i].name+"<br><br>";
+										console.log(events[i].timeStartHour);
+										console.log(events[i].timeStartMinute);
+										console.log(events[i].timeEndHour);
+										console.log(events[i].timeEndMinute);
+										day0 += events[i].name+"<br>";
+										day0 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day0 += "AM";
+										} else{
+											day0 += "PM";
+										}
+										day0 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day0 += "AM";
+										} else{
+											day0 += "PM";
+										}
+										day0 += "<br><br>";
+										
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -918,7 +538,7 @@
 							}
 					}
 					//later year
-
+					
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
 			document.getElementById("event2").innerHTML = day2;
@@ -946,9 +566,17 @@
 			} else {
 				this.timeStartHour=timeStartHour;
 			}
-			this.timeStartMinute=timeStartMinute;
+			if(timeStartMinute==0){
+				this.timeStartMinute="00";
+			} else{
+				this.timeStartMinute=timeStartMinute;
+			}
 			this.timeEndHour=timeEndHour;
-			this.timeEndMinute=timeEndMinute;
+			if(timeEndMinute==0){
+				this.timeEndMinute="00";
+			} else{
+				this.timeEndMinute=timeEndMinute;
+			}
 			this.start_am_or_pm=start_am_or_pm;
 			this.end_am_or_pm=end_am_or_pm;
 		}
@@ -1062,13 +690,13 @@
             </tr>
 						<tr>
 							<!-- where to add the info from the data base -->
-							<td id = "event0" ></td>
-							<td id = "event1" ></td>
-							<td id = "event2" ></td>
-							<td id = "event3" ></td>
-							<td id = "event4" ></td>
-							<td id = "event5" ></td>
-							<td id = "event6" ></td>
+							<td id = "event0" style="text-align:center;"></td>
+							<td id = "event1" style="text-align:center;"></td>
+							<td id = "event2" style="text-align:center;"></td>
+							<td id = "event3" style="text-align:center;"></td>
+							<td id = "event4" style="text-align:center;"></td>
+							<td id = "event5" style="text-align:center;"></td>
+							<td id = "event6" style="text-align:center;"></td>
 						</tr>
 					</table>
 
