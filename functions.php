@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -63,14 +64,15 @@ function getUserById($id){
 function display_error() {
 	global $errors;
     console.log("in display errors");
-
+    
 	if (count($errors) > 0){
-		echo '<div class="error">';
-			foreach ($errors as $error){
-				echo $error .'<br>';
-			}
-		echo '</div>';
+        echo '<div class="error">';
+        foreach ($errors as $error){
+            echo $error .'<br>';
+        }
+    echo '</div>';
 	}
+    
 }
 
 function hello(){

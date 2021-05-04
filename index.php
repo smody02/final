@@ -221,8 +221,8 @@
 	/* //events of the day section */
 	#listedEvents{
 		/* margin-top: 20px; */
-		padding-top: 10px;
-		padding-left: 10px;
+		padding-top: 5%;
+		padding-left: 7%;
 		/* border: 2px solid #F0F8FF; */
 		height: 450px;
 		background-color: rgba(255, 255, 255, .4);
@@ -232,7 +232,7 @@
 	.listedForm{
 		/* margin-top: 20px; */
 		padding-top: 10px;
-		padding-left: 13%;
+		padding-left: 7%;
 		/* border: 2px solid #F0F8FF; */
 		height: 450px;
 		background-color: rgba(255, 255, 255, .4);
@@ -261,7 +261,7 @@
 
 	/* welcome, ____! and logout button  */
 	.righ {
-		padding-top: 15px;
+		/* padding-top: 15px; */
 	  width: 29%;
 		outline-color: #242224;
 		/* font-size: 24px; */
@@ -405,7 +405,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			position: absolute;
-			left: 37%;
+			left: 38%;
 
 	}
 
@@ -420,6 +420,24 @@
 		font-style: italic;
 		font-size: 16px;
 	}
+	
+	.error{
+	    /* visibility: hidden; */
+	    width: 160px;
+	    background-color: #31669F;
+	    color: #F0F8FF;
+	    text-align: center;
+	    border-radius: 6px;
+	    padding: 8px 0;
+	    position: absolute;
+	    z-index: 1;
+	    /* top: 125%; */
+	    /* left: 50%; */
+	    margin-left: 420px;
+		margin-top: -150px;
+	}
+
+	
 	
 	a#plus:link a#plus:visited{
 		font-weight: bold;
@@ -758,7 +776,7 @@ to {opacity:1 ;}
 			
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
-				var fulldate = " - " + events[i].month + "/" + events[i].day + "/" + events[i].year;
+				var fulldate = " - " + "<span class='dateTime'>" + events[i].month + "/" + events[i].day + "/" + events[i].year + "</span>";
 				
 				//if month, day and year match today put in event0
 
@@ -803,12 +821,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 								// day0 += events[i].name+"<br><br>";
@@ -841,12 +859,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -878,12 +896,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 2) > 0) {
@@ -915,12 +933,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -952,12 +970,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 3) > 0) {
@@ -989,12 +1007,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1026,12 +1044,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 4) > 0) {
@@ -1063,12 +1081,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1100,12 +1118,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 5) > 0) {
@@ -1137,12 +1155,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1174,12 +1192,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 6) > 0) {
@@ -1211,12 +1229,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+fulldate+"<br><br>";
+											otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1248,23 +1266,23 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+fulldate+"<br><br>";
+										otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if (check == false){
 								if(events[i].day > day){
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 								else if(events[i].month > month){
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 								else if(events[i].year > year){
-									otherEvents += events[i].name+fulldate+"<br><br>";
+									otherEvents += "• "+events[i].name+fulldate+"<br><br>";
 								}
 
 							}
@@ -1593,6 +1611,7 @@ to {opacity:1 ;}
 		</p>
 		<p id = "location" >Location: <input type="text" name = "location"></p>
 		<p id="description">Description: <input type="text" name = "description"></p>
+		<?php display_error() ?>
 		<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
 
 	</form>
