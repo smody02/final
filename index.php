@@ -11,7 +11,19 @@
 		background-attachment: fixed;
 		background-size: 100%;
 		position: relative;
+		color: #241C19;
 	}
+
+	.text{
+		color: #241C19;
+	}
+
+.title{
+		margin-left: 10px;
+		 font-family: Rubik, sans-serif;
+		 color: #241C19;
+	}
+
 
 	</style>
 
@@ -469,7 +481,7 @@
 					<option id = "and10" value=""></option>
 				</select><br>
 			</p>
-			<p>Start Time:
+			<p>Start Time: <span style="margin-left: 1.5px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
 				<span>Hour:</span><select name = "start_hour">
 					<option value="12">12:00</option>
 					<option value="1">1:00</option>
