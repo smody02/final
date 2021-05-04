@@ -249,25 +249,33 @@
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				//if month, day and year match today put in event0
-				if(month == events[i].month && events[i].year == year){
-					if(events[i].day == day)
-						day0 += events[i].name+"\n\n";
-					else if(events[i].day == day+1)
-						day1 += events[i].name+"\n\n";
-					else if(events[i].day == day+2)
-						day2 += events[i].name+"\n\n";	
-					else if(events[i].day == day+3)
-						day3 += events[i].name+"\n\n";
-					else if(events[i].day == day+4)
-						day4 += events[i].name+"\n\n";
-					else if(events[i].day == day+5)
-						day5 += events[i].name+"\n\n";
-					else if(events[i].day == day+6)
-						day6 += events[i].name+"\n\n";
-					else
-						otherEvents += events[i].name+"\n\n";
+
+					//ORIGINAL CODE
+					if(month == events[i].month && events[i].year == year){
+						if(events[i].day == day)
+							day0 += events[i].name+"<br><br>";
+						else if(events[i].day == day+1)
+							day1 += events[i].name+"<br><br>";
+						else if(events[i].day == day+2)
+							day2 += events[i].name+"<br><br>";	
+						else if(events[i].day == day+3)
+							day3 += events[i].name+"<br><br>";
+						else if(events[i].day == day+4)
+							day4 += events[i].name+"<br><br>";
+						else if(events[i].day == day+5)
+							day5 += events[i].name+"<br><br>";
+						else if(events[i].day == day+6)
+							day6 += events[i].name+"<br><br>";
+						else{
+							otherEvents += events[i].name+"<br><br>";
+						}
+					}
+					else{
+						
+					}
+					
 				}
-			}
+
 			
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
@@ -291,7 +299,11 @@
 			this.day=day;
 			this.month=month;
 			this.year=year;
-			this.timeStartHour=timeStartHour;
+			if(timeStartHour==0){
+				this.timeStartHour=12;
+			} else {
+				this.timeStartHour=timeStartHour;
+			}
 			this.timeStartMinute=timeStartMinute;
 			this.timeEndHour=timeEndHour;
 			this.timeEndMinute=timeEndMinute;

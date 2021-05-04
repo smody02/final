@@ -179,6 +179,10 @@ function event(){
 	}
 
 	if (count($errors) == 0) {
+        
+        if($start_hour == 12){
+            $start_hour = 0; 
+        }
 
 		$sql = "INSERT INTO events (userID, name, location, description, day, month, year, timeStartHour, timeStartMinute, timeEndHour, timeEndMinute, start_am_or_pm, end_am_or_pm) VALUES('$user_id', '$name', '$location', '$description', '$day', '$month', '$year', '$start_hour', '$start_min', '$end_hour', '$end_min', '$start_am_or_pm', '$end_am_or_pm')";
 		$conn->query($sql);
@@ -190,7 +194,7 @@ function event(){
 
 function printEvent() {
 	global $conn;
-	$query = "SELECT * FROM events INNER JOIN users ON events.userID = users.id WHERE userID = " . $_SESSION['user']['id'];
+	$query = "SELECT * FROM events INNER JOIN users ON events.userID = users.id WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY start_am_or_pm, timeStartHour, timeStartMinute ASC";
     //$numres = "SELECT COUNT(events.name) FROM events INNER JOIN users ON events.userID = " . $_SESSION['user']['id'];
 	$result = $conn->query($query);
 
@@ -206,7 +210,7 @@ function printEvent() {
 function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstarthour, &$tstartmin, &$tendhour, &$tendmin, &$samorpm, &$eamorpm){
     global $conn;
 	
-    $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'];
+    $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY start_am_or_pm, timeStartHour, timeStartMinute ASC";
 	if($result = $conn->query($query)){
         while($row = $result->fetch_assoc()){
             array_push($names, $row["name"]);
