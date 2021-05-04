@@ -217,7 +217,6 @@ function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstart
             array_push($eamorpm, $row["end_am_or_pm"]);
         }
     }
-
 }
 
 ?>
