@@ -130,11 +130,9 @@
 
 	button:hover{
 		background-color: #525B71;
-	  border: none;
-	  color: #fbfdfe;
-
+		border: none;
+		color: #fbfdfe;
 	}
-
 
 	div.form-inline{
 	  top: 50%;
@@ -434,7 +432,7 @@
 	    /* top: 125%; */
 	    /* left: 50%; */
 	    margin-left: 420px;
-		margin-top: -150px;
+		margin-top: -260px;
 	}
 
 	
@@ -471,8 +469,7 @@ text-align: center;
 .popup:hover{
 	color: #F0F8FF;
 	background-color: #525B71; 
-	border-radius: 50%;
-	background: #525B71; 
+	/* border-radius: 50%; */
 	width: 20px;
 	height: 20px;
 	text-align: center;
@@ -495,7 +492,7 @@ margin-left: -80px;
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+/* .popup .popuptext::after {
 content: "";
 position: absolute;
 bottom: 100%;
@@ -505,7 +502,7 @@ border-width: 5px;
 border-style: solid;
 border-color: #31669F transparent transparent transparent;
 
-}
+} */
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
@@ -813,7 +810,7 @@ to {opacity:1 ;}
 										}
 										day0 += "</div>";
 										day0 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day0 += " &oplus; ";
+										day0 += " &or;";
 										day0 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day0 += "</div>";
 										day0 += "<br><br>";
@@ -852,7 +849,7 @@ to {opacity:1 ;}
 											}
 											day1 += "</div>";
 											day1 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day1 += " &oplus; ";
+											day1 += " &or;";
 											day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day1 += "</div>";
 											day1 += "<br><br>";
@@ -889,7 +886,7 @@ to {opacity:1 ;}
 										}
 										day1 += "</div>";
 										day1 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day1 += " &oplus; ";
+										day1 += " &or;";
 										day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day1 += "</div>";
 										day1 += "<br><br>";
@@ -926,7 +923,7 @@ to {opacity:1 ;}
 											}
 											day2 += "</div>";
 											day2 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day2 += " &oplus; ";
+											day2 += " &or;";
 											day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day2 += "</div>";
 											day2 += "<br><br>";
@@ -963,7 +960,7 @@ to {opacity:1 ;}
 										}
 										day2 += "</div>";
 										day2 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day2 += " &oplus; ";
+										day2 += " &or;";
 										day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day2 += "</div>";
 										day2 += "<br><br>";
@@ -1000,7 +997,7 @@ to {opacity:1 ;}
 											}
 											day3 += "</div>";
 											day3 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day3 += " &oplus; ";
+											day3 += " &or;";
 											day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day3 += "</div>";
 											day3 += "<br><br>";
@@ -1037,7 +1034,7 @@ to {opacity:1 ;}
 										}
 										day3 += "</div>";
 										day3 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day3 += " &oplus; ";
+										day3 += " &or;";
 										day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day3 += "</div>";
 										day3 += "<br><br>";
@@ -1074,7 +1071,7 @@ to {opacity:1 ;}
 											}
 											day4 += "</div>";
 											day4 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day4 += " &oplus; ";
+											day4 += " &or;";
 											day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day4 += "</div>";
 											day4 += "<br><br>";
@@ -1111,7 +1108,7 @@ to {opacity:1 ;}
 										}
 										day4 += "</div>";
 										day4 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day4 += " &oplus; ";
+										day4 += " &or;";
 										day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day4 += "</div>";
 										day4 += "<br><br>";
@@ -1148,7 +1145,7 @@ to {opacity:1 ;}
 											}
 											day5 += "</div>";
 											day5 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day5 += " &oplus; ";
+											day5 += " &or;";
 											day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day5 += "</div>";
 											day5 += "<br><br>";
@@ -1185,7 +1182,7 @@ to {opacity:1 ;}
 										}
 										day5 += "</div>";
 										day5 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day5 += " &oplus; ";
+										day5 += " &or;";
 										day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day5 += "</div>";
 										day5 += "<br><br>";
@@ -1222,7 +1219,7 @@ to {opacity:1 ;}
 											}
 											day6 += "</div>";
 											day6 += "<div class='popup' onclick='seeMore("+i+")'>";
-											day6 += " &oplus; ";
+											day6 += " &or;";
 											day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 											day6 += "</div>";
 											day6 += "<br><br>";
@@ -1259,7 +1256,7 @@ to {opacity:1 ;}
 										}
 										day6 += "</div>";
 										day6 += "<div class='popup' onclick='seeMore("+i+")'>";
-										day6 += " &oplus; ";
+										day6 += " &or;";
 										day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
 										day6 += "</div>";
 										day6 += "<br><br>";
