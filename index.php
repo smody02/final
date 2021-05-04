@@ -7,10 +7,12 @@
 	<link rel='stylesheet' type="text/css" href="style2.css" />
 	<style type="text/css">
 	body {
-		background-image: url("background1.jpg");
-		background-attachment: fixed;
-		background-size: 100%;
-		position: relative;
+		background-image: url('background1.jpg');
+	    background-attachment: fixed;
+	    background-size: 100%;
+	    position: relative;
+	    background-position: center;
+	    font-family: Optima;
 		color: #332622;
 	}
 
