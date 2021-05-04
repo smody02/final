@@ -12,7 +12,7 @@ body,html {
 
 }
 
-div#title{
+/* div#title{
 	margin-left: 20px;
 	font-family: Optima;
 	/* background-color: rgba(255, 255, 255, .4);
@@ -25,7 +25,7 @@ div#title{
 	Weight:700;
 	Font Size:50px;
 	Line Height:54px; */
-}
+
 
 /* inspirational quote section   */
 .text {
@@ -203,7 +203,7 @@ a:hover, a:active {
 	/* margin-top: 20px; */
 	padding-top: 10px;
 	padding-left: 10px;
-	border: 2px solid #F0F8FF;
+	/* border: 2px solid #F0F8FF; */
 	height: 450px;
 	background-color: rgba(255, 255, 255, .4);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -212,8 +212,8 @@ a:hover, a:active {
 .listedForm{
 	/* margin-top: 20px; */
 	padding-top: 10px;
-	padding-left: 10px;
-	border: 2px solid #F0F8FF;
+	padding-left: 13%;
+	/* border: 2px solid #F0F8FF; */
 	height: 450px;
 	background-color: rgba(255, 255, 255, .4);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -328,4 +328,69 @@ input#makeEvent:hover, input#makeEvent:active {
 
 #user{
 	padding-right: 30px;
+}
+
+/* FORM STYLEEEE!!! */
+
+p#name{
+	font-weight: bold;
+	/* margin-left: auto;
+	margin-right: auto; */
+}
+
+span#notBold{
+	font-weight: normal;
+	padding-top: 9px;
+}
+
+p#time{
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+
+select,input{
+	font-family: Optima;
+	/* font-weight: bold; */
+	font-size: 18px;
+	background-color: rgba(255,255,255,.3);
+	border-width: .1px;
+}
+
+p#location, p#description{
+	font-weight: bold;
+}
+
+
+form#form{
+	 position: relative;
+}
+
+input#makeEvent {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+  	font-size: 18px;
+  	/* margin-left: 20px; */
+    padding: 10px 20px;
+    text-align: center;
+  	background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+  	color: #525B71;
+    text-decoration: none;
+    display: inline-block;
+  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: Optima;
+    margin-top: 10px;
+    border-color: rgba(0,0,0,0);
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		left: 37%;
+
+}
+
+
+input#makeEvent:hover {
+  background-color: #525B71;
+  color: #F0F8FF;
 }

@@ -33,7 +33,7 @@
 		function accessAPI(){
 			getQuote();
 			dateNtime();
-			
+
 		}
 
 		/* GET QUOTE FUNCTION: Accesses API */
@@ -228,14 +228,14 @@
 			// Step 4: fire off the HTTP request
 			request2.send();
 			console.log("4 - Request sent");
-			
-			
+
+
 		}
 
 		function fillEvents(day, month, year){
 			//access array with event values and insert into calendar
 			//document.getElementById("event0").innerHTML = "event from database";
-			
+
 			day0 = "";
 			day1 = "";
 			day2 = "";
@@ -244,7 +244,7 @@
 			day5 = "";
 			day6 = "";
 			otherEvents = "";
-			
+
 			console.log("today is ... "+day);
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
@@ -258,7 +258,7 @@
 							else if(events[i].day == day+1)
 								day1 += events[i].name+"<br><br>";
 							else if(events[i].day == day+2)
-								day2 += events[i].name+"<br><br>";	
+								day2 += events[i].name+"<br><br>";
 							else if(events[i].day == day+3)
 								day3 += events[i].name+"<br><br>";
 							else if(events[i].day == day+4)
@@ -281,11 +281,11 @@
 					else if(events[i].year > year){
 						otherEvents += events[i].name+"<br><br>";
 					}
-					
-					
+
+
 				}
 
-			
+
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
 			document.getElementById("event2").innerHTML = day2;
@@ -294,7 +294,7 @@
 			document.getElementById("event5").innerHTML = day5;
 			document.getElementById("event6").innerHTML = day6;
 			document.getElementById("listedEvents").innerHTML = otherEvents;
-			
+
 
 		}
 
@@ -447,160 +447,170 @@
     </div>
 </div>
 
-	<div class="row">
-	<div class="column left" >
-		<div id= "plsCenter"> ADD EVENT </div>
+<div class="row">
+<div class="column left" >
+	<div id= "plsCenter"> ADD EVENT </div>
 
-			<div class="eventForm">
-		<form id = "form" method="POST" action="index.php">
-			<div class="listedForm">
-			<p id = "name"> Event Name: <input type="text" name="name"> </p>
-			<p id = "name"> Date: &nbsp;&nbsp;&nbsp;
-				<span>Month:</span><select id="months" name = "month">
-					<option value=1>January</option>
-					<option value=2>February</option>
-					<option value=3>March</option>
-					<option value=4>April</option>
-					<option value=5>May</option>
-					<option value=6>June</option>
-					<option value=7>July</option>
-					<option value=8>August</option>
-					<option value=9>September</option>
-					<option value=10>October</option>
-					<option value=11>November</option>
-					<option value=12>December</option>
-				</select>
-				<span>Day:</span><select id="days" name = "day">
-					<option value=1>1</option>
-					<option value=2>2</option>
-					<option value=3>3</option>
-					<option value=4>4</option>
-					<option value=5>5</option>
-					<option value=6>6</option>
-					<option value=7>7</option>
-					<option value=8>8</option>
-					<option value=9>9</option>
-					<option value=10>10</option>
-					<option value=11>11</option>
-					<option value=12>12</option>
-					<option value=13>13</option>
-					<option value=14>14</option>
-					<option value=15>15</option>
-					<option value=16>16</option>
-					<option value=17>17</option>
-					<option value=18>18</option>
-					<option value=19>19</option>
-					<option value=20>20</option>
-					<option value=21>21</option>
-					<option value=22>22</option>
-					<option value=23>23</option>
-					<option value=24>24</option>
-					<option value=25>25</option>
-					<option value=26>26</option>
-					<option value=27>27</option>
-					<option value=28>28</option>
-					<option value=29>29</option>
-					<option value=30>30</option>
-					<option value=31>31</option>
-				</select>
-				<span>Year:</span><select name = "year">
-					<option id = "thisyear" value=""></option>
-					<option id = "and1" value=""></option>
-					<option id = "and2" value=""></option>
-					<option id = "and3" value=""></option>
-					<option id = "and4" value=""></option>
-					<option id = "and5" value=""></option>
-					<option id = "and6" value=""></option>
-					<option id = "and7" value=""></option>
-					<option id = "and8" value=""></option>
-					<option id = "and9" value=""></option>
-					<option id = "and10" value=""></option>
-				</select><br>
-			</p>
-			<p>Start Time: <span style="margin-left: 1.5px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				<span>Hour:</span><select name = "start_hour">
-					<option value=12>12:00</option>
-					<option value=1>1:00</option>
-					<option value=2>2:00</option>
-					<option value=3>3:00</option>
-					<option value=4>4:00</option>
-					<option value=5>5:00</option>
-					<option value=6>6:00</option>
-					<option value=7>7:00</option>
-					<option value=8>8:00</option>
-					<option value=9>9:00</option>
-					<option value=10>10:00</option>
-					<option value=11>11:00</option>
-				</select>
-				<span>Minute:</span><select name = "start_min">
-					<option value=00>00</option>
-					<option value=05>05</option>
-					<option value=10>10</option>
-					<option value=15>15</option>
-					<option value=20>20</option>
-					<option value=25>25</option>
-					<option value=30>30</option>
-					<option value=35>35</option>
-					<option value=40>40</option>
-					<option value=45>45</option>
-					<option value=50>50</option>
-					<option value=55>55</option>
-				</select>
-				<span>AM/PM:</span><select name="start_am_or_pm">
-					<option value=1>AM</option>
-					<option value=2>PM</option>
-				</select><br>
-			End Time:<span style="margin-left: 2px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				<span>Hour:</span><select name = "end_hour">
-					<option value=12>12:00</option>
-					<option value=1>1:00</option>
-					<option value=2>2:00</option>
-					<option value=3>3:00</option>
-					<option value=4>4:00</option>
-					<option value=5>5:00</option>
-					<option value=6>6:00</option>
-					<option value=7>7:00</option>
-					<option value=8>8:00</option>
-					<option value=9>9:00</option>
-					<option value=10>10:00</option>
-					<option value=11>11:00</option>
-				</select>
-				<span>Minute:</span><select name = "end_min">
-					<option value=00>00</option>
-					<option value=05>05</option>
-					<option value=10>10</option>
-					<option value=15>15</option>
-					<option value=20>20</option>
-					<option value=25>25</option>
-					<option value=30>30</option>
-					<option value=35>35</option>
-					<option value=40>40</option>
-					<option value=45>45</option>
-					<option value=50>50</option>
-					<option value=55>55</option>
-				</select>
-				<span>AM/PM:</span><select name="end_am_or_pm">
-					<option value=1>AM</option>
-					<option value=2>PM</option>
-				</select>
-			</p>
-			<p id = "location">Location <input type="text" name = "location"></p>
-			<p id="description">Description: <br><br><input type="text" name = "description"></p>
-			<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
-			
-		</form>
-		</div>
+		<div class="eventForm">
+	<form id = "form" method="POST" action="index.php">
+		<div class="listedForm">
+		<p id = "name"> Event Name: <input type="text" name="name"> </p>
+		<p id = "name">  Date:
+		<br>
+			<span id="notBold" >Month:</span><select id="months" name = "month">
+				<option value=1>January</option>
+				<option value=2>February</option>
+				<option value=3>March</option>
+				<option value=4>April</option>
+				<option value=5>May</option>
+				<option value=6>June</option>
+				<option value=7>July</option>
+				<option value=8>August</option>
+				<option value=9>September</option>
+				<option value=10>October</option>
+				<option value=11>November</option>
+				<option value=12>December</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >Day:</span><select id="days" name = "day">
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+				<option value=6>6</option>
+				<option value=7>7</option>
+				<option value=8>8</option>
+				<option value=9>9</option>
+				<option value=10>10</option>
+				<option value=11>11</option>
+				<option value=12>12</option>
+				<option value=13>13</option>
+				<option value=14>14</option>
+				<option value=15>15</option>
+				<option value=16>16</option>
+				<option value=17>17</option>
+				<option value=18>18</option>
+				<option value=19>19</option>
+				<option value=20>20</option>
+				<option value=21>21</option>
+				<option value=22>22</option>
+				<option value=23>23</option>
+				<option value=24>24</option>
+				<option value=25>25</option>
+				<option value=26>26</option>
+				<option value=27>27</option>
+				<option value=28>28</option>
+				<option value=29>29</option>
+				<option value=30>30</option>
+				<option value=31>31</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >Year:</span><select name = "year">
+				<option id = "thisyear" value=""></option>
+				<option id = "and1" value=""></option>
+				<option id = "and2" value=""></option>
+				<option id = "and3" value=""></option>
+				<option id = "and4" value=""></option>
+				<option id = "and5" value=""></option>
+				<option id = "and6" value=""></option>
+				<option id = "and7" value=""></option>
+				<option id = "and8" value=""></option>
+				<option id = "and9" value=""></option>
+				<option id = "and10" value=""></option>
+			</select><br>
+		</p>
+		<p id="time">Start Time: <span style="margin-left: 1.5px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br>
+			<span id="notBold" >Hour:</span><select name = "start_hour">
+				<option value=12>12:00</option>
+				<option value=1>1:00</option>
+				<option value=2>2:00</option>
+				<option value=3>3:00</option>
+				<option value=4>4:00</option>
+				<option value=5>5:00</option>
+				<option value=6>6:00</option>
+				<option value=7>7:00</option>
+				<option value=8>8:00</option>
+				<option value=9>9:00</option>
+				<option value=10>10:00</option>
+				<option value=11>11:00</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >Minute:</span><select name = "start_min">
+				<option value=00>00</option>
+				<option value=05>05</option>
+				<option value=10>10</option>
+				<option value=15>15</option>
+				<option value=20>20</option>
+				<option value=25>25</option>
+				<option value=30>30</option>
+				<option value=35>35</option>
+				<option value=40>40</option>
+				<option value=45>45</option>
+				<option value=50>50</option>
+				<option value=55>55</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >am/pm:</span><select name="start_am_or_pm">
+				<option value=1>AM</option>
+				<option value=2>PM</option>
+			</select><br>
+			<br>
+		End Time:<span style="margin-left: 2px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br>
+			<span id="notBold" >Hour:</span><select name = "end_hour">
+				<option value=12>12:00</option>
+				<option value=1>1:00</option>
+				<option value=2>2:00</option>
+				<option value=3>3:00</option>
+				<option value=4>4:00</option>
+				<option value=5>5:00</option>
+				<option value=6>6:00</option>
+				<option value=7>7:00</option>
+				<option value=8>8:00</option>
+				<option value=9>9:00</option>
+				<option value=10>10:00</option>
+				<option value=11>11:00</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >Minute:</span><select name = "end_min">
+				<option value=00>00</option>
+				<option value=05>05</option>
+				<option value=10>10</option>
+				<option value=15>15</option>
+				<option value=20>20</option>
+				<option value=25>25</option>
+				<option value=30>30</option>
+				<option value=35>35</option>
+				<option value=40>40</option>
+				<option value=45>45</option>
+				<option value=50>50</option>
+				<option value=55>55</option>
+			</select>
+			&nbsp;
+			<span id="notBold" >am/pm:</span><select name="end_am_or_pm">
+				<option value=1>AM</option>
+				<option value=2>PM</option>
+			</select>
+		</p>
+		<p id = "location" >Location: <input type="text" name = "location"></p>
+		<p id="description">Description: <input type="text" name = "description"></p>
+		<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
+
+	</form>
 	</div>
-		</div>
+</div>
+	</div>
 
 <div class="column right" >
-	<!-- <div class="uE" > -->
-		<div id= "plsCenterGreen"> UPCOMING EVENTS </div>
+<!-- <div class="uE" > -->
+	<div id= "plsCenterGreen"> UPCOMING EVENTS </div>
 
-	<!-- </div> -->
-	<!-- <div class="aE" >
-		Add New Event
-	<a href="#event">&#43;</a>
+<!-- </div> -->
+<!-- <div class="aE" >
+	Add New Event
+<a href="#event">&#43;</a>
 </div> -->
 <!-- where to add the upcoming events -->
 <div id="listedEvents">
