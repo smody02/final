@@ -758,6 +758,8 @@ to {opacity:1 ;}
 			
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
+				var fulldate = " - " + events[i].month + "/" + events[i].day + "/" + events[i].year;
+				
 				//if month, day and year match today put in event0
 
 					//ORIGINAL CODE
@@ -801,12 +803,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 								// day0 += events[i].name+"<br><br>";
@@ -839,12 +841,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -876,12 +878,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 2) > 0) {
@@ -913,12 +915,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -950,12 +952,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 3) > 0) {
@@ -987,12 +989,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1024,12 +1026,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 4) > 0) {
@@ -1061,12 +1063,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1098,12 +1100,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 5) > 0) {
@@ -1135,12 +1137,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1172,12 +1174,12 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if(checkOverflowMonth(day, month, 6) > 0) {
@@ -1209,12 +1211,12 @@ to {opacity:1 ;}
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
-											otherEvents += events[i].name+"<br><br>";
+											otherEvents += events[i].name+fulldate+"<br><br>";
 										}
 									}
 									else if (events[i].year > year + mod) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 							}
@@ -1246,23 +1248,23 @@ to {opacity:1 ;}
 									}
 									else if (events[i].month > month) {
 										check = true;
-										otherEvents += events[i].name+"<br><br>";
+										otherEvents += events[i].name+fulldate+"<br><br>";
 									}
 								}
 								else if (events[i].year > year) {
 									check = true;
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 							}
 							if (check == false){
 								if(events[i].day > day){
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 								else if(events[i].month > month){
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 								else if(events[i].year > year){
-									otherEvents += events[i].name+"<br><br>";
+									otherEvents += events[i].name+fulldate+"<br><br>";
 								}
 
 							}
