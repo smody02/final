@@ -5,10 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>C&C Calendar Sign In</title>
-<link rel='stylesheet' type="text/css" href="style2.css" />
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- <link rel='stylesheet' type="text/css" href="style2.css" /> -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 <style>
 
 body {
@@ -17,12 +17,34 @@ body {
   background-size: 100%;
   position: relative;
   background-position: center;
+  font-family: Optima;
+  /* position: fixed; */
 }
 
-.login-form {
+div.lef{
+  /* width: 70%; */
+	outline-color: #242224;
+	/* font-size: 48px; */
+  text-align: center;
+	/* color: #242224; */
+	font-weight: bolder;
+	padding-top: 30px;
+	/* padding-bottom: px; */
+	/* padding-left: 5%; */
+	/* margin-bottom: 10px; */
+  color: #332622;
+	Style:normal;
+ 	weight:700;
+ 	font-Size:56px;
+ 	line-Height:54px;
+}
+
+div.login-form {
     width: 340px;
     margin: 50px auto;
+    margin-top: 30px;
   	font-size: 15px;
+    /* position:fixed; */
 }
 .login-form form {
     margin-bottom: 15px;
@@ -30,10 +52,13 @@ body {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
     background-color: #F0F8FF;
+    /* position:fixed; */
 }
 .login-form h2 {
     margin: 0 0 15px;
     background-color: #F0F8FF;
+    text-align: center;
+    font-size: 24px;
 }
 .form-control{
     min-height: 38px;
@@ -42,7 +67,7 @@ body {
   	font-size: 18px;
   	/* margin-left: 20px; */
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
   	/* background-color: #525B71; */
   	color: #525B71;
     text-decoration: none;
@@ -92,7 +117,7 @@ body {
 
 input.form-control{
   font-family: Optima;
-  text-align: center;
+  text-align: left;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -124,17 +149,20 @@ a:hover, a:active {
   color: #F0F8FF;
 }
 
+
+
 </style>
 </head>
 <body>
-    <div class="column lef" >
-    <div id="title">
+    <div class="lef" >
     Calm & Collected Calendar
     </div>
-    </div>
+
 <div class="login-form">
     <form method="post" action="sign_in.php">
-        <h2 class="text-center">Log in</h2>
+        <h2>Log in</h2>
+        <p>Welcome!</p>
+        <hr>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" name="username">
         </div>
@@ -146,7 +174,7 @@ a:hover, a:active {
             <input type="submit" class="btn btn-primary btn-block" value="Sign In" name="login_btn"/>
         </div>
     </form>
-    <p class="text-center"><a href="sign_up.php">Create an Account</a></p>
+    <p class="text-center"><a href="sign_up.html">Create an Account</a></p>
 </div>
 </body>
 </html>
