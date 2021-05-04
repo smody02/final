@@ -215,6 +215,7 @@
 					document.getElementById("and10").value = year+10;
 
 
+
 					//update selected month and day depending on current date
 					var month = parseInt(info.month);
 					var day = parseInt(info.date.substring(8,10));
@@ -231,6 +232,29 @@
 
 
 		}
+		
+		function checkOverflowMonth(day, month, addValue) {
+			d = parseInt(day);
+			m = parseInt(month);
+			add = parseInt(addValue);
+			
+			if (m == 2){
+				if (d + add > 28) {
+					return (d + add) % 28;
+				}
+			}
+			else if (m == 4 || m == 6 || m == 9 || m == 11) {
+				if (d + add > 30) {
+					return (d + add) % 30;
+				}
+			}
+			else {
+				if (d + add > 31) {
+					return (d + add) % 31;
+				}
+			}
+			return -1;
+		}
 
 		function fillEvents(day, month, year){
 			//access array with event values and insert into calendar
@@ -244,13 +268,18 @@
 			day5 = "";
 			day6 = "";
 			otherEvents = "";
+<<<<<<< Updated upstream
 
 			console.log("today is ... "+day);
+=======
+			
+>>>>>>> Stashed changes
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				//if month, day and year match today put in event0
 
 					//ORIGINAL CODE
+<<<<<<< Updated upstream
 					if(events[i].year == year){
 						if(month == events[i].month){
 							if(events[i].day == day)
@@ -270,14 +299,254 @@
 							//this month and year, later day
 							else if(events[i].day > day){
 								otherEvents += events[i].name+"<br><br>";
+=======
+					// if(events[i].year == year){
+					// 	if(month == events[i].month){
+							
+							var check = false;
+							if (month == 12) {
+								var mod = 1;
 							}
-						}
-						//this year, later month
-						else if(events[i].month > month){
-							otherEvents += events[i].name+"<br><br>";
-						}
+							else {
+								var mod = 0;
+							}
+							
+							if(events[i].day == day) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day0 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+								// day0 += events[i].name+"<br><br>";
+							if(checkOverflowMonth(day, month, 1) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 1)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day1 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+1) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day1 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if(checkOverflowMonth(day, month, 2) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 2)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day2 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+2) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day2 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if(checkOverflowMonth(day, month, 3) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 3)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day3 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+3) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day3 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if(checkOverflowMonth(day, month, 4) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 4)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day4 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+4) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day4 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if(checkOverflowMonth(day, month, 5) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 5)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day5 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+5) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day5 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if(checkOverflowMonth(day, month, 6) > 0) {
+								if (events[i].day == checkOverflowMonth(day, month, 6)) {
+									if(events[i].year == year + mod){
+										if(((month + 1) % 12) == events[i].month) {
+											check = true;
+											day6 += events[i].name+"<br><br>";
+										}
+										else if (events[i].month > ((month + 1) % 12)) {
+											check = true;
+											otherEvents += events[i].name+"<br><br>";
+										}
+									}
+									else if (events[i].year > year + mod) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+							}
+							else if (events[i].day == day+6) {
+								if(events[i].year == year){
+									if(month == events[i].month) {
+										check = true;
+										day6 += events[i].name+"<br><br>";
+									}
+									else if (events[i].month > month) {
+										check = true;
+										otherEvents += events[i].name+"<br><br>";
+									}
+								}
+								else if (events[i].year > year) {
+									check = true;
+									otherEvents += events[i].name+"<br><br>";
+								}
+							}
+							if (check == false){
+								if(events[i].day > day){
+									otherEvents += events[i].name+"<br><br>";
+								}
+								else if(events[i].month > month){
+									otherEvents += events[i].name+"<br><br>";
+								}
+								else if(events[i].year > year){
+									otherEvents += events[i].name+"<br><br>";
+								}
+>>>>>>> Stashed changes
+							}
 					}
 					//later year
+<<<<<<< Updated upstream
 					else if(events[i].year > year){
 						otherEvents += events[i].name+"<br><br>";
 					}
@@ -286,6 +555,9 @@
 				}
 
 
+=======
+			
+>>>>>>> Stashed changes
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
 			document.getElementById("event2").innerHTML = day2;
@@ -361,7 +633,6 @@
 		for(var i = 0; i < n_length; i++){
 			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
 		}
-		console.log(events.length);
 
 	</script>
 </head>
