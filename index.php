@@ -17,9 +17,495 @@
 	.text{
 		color: #332622;
 	}
+	body,html {
+			font-size: 20px;
+			font-family: Optima;
+
+			/* background-color: #f9faff ; */
+	    color: #332622;
+	    margin-bottom: 30px;
+		}
+		* {
+	  box-sizing: border-box;
+		color: #332622;
+
+	}
+
+	/* div#title{
+		margin-left: 20px;
+		font-family: Optima;
+		/* background-color: rgba(255, 255, 255, .4);
+		 */
+		 /* font-family: Rubik, sans-serif; */
+		 /* color: #332622; */
+
+		 /* Font Family: “myriad-pro-1”, “myriad-pro-2”, HelveticaNeue, Helvetica, Arial, serif;
+		 Style:normal;
+		Weight:700;
+		Font Size:50px;
+		Line Height:54px; */
+
+
+	/* inspirational quote section   */
+	.text {
+		font-size: 20px;
+		text-align: center;
+		background-color: #F0F8FF;
+		height:15%;
+		padding: 20px;
+		box-sizing:border-box;
+		/* margin-top: 10px; */
+		font-weight: lighter;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		/* color: #332622; */
+	}
 
 
 
+	/* continder fot the calendar */
+	div#plsCenter {
+		position:relative;
+		border: 2px solid #F0F8FF;
+		background-color: #F0F8FF;
+		font-size: 30px;
+		margin-top: 20px;
+		font-weight: bolder;
+		/* color: #FFF; */
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		text-align: center;
+	}
+
+	div#plsCenterGreen {
+		position:relative;
+		border: 2px solid #F0F8FF;
+		background-color: #F0F8FF;
+		font-size: 30px;
+		margin-top: 20px;
+		font-weight: bolder;
+		/* color: #FFF; */
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		text-align: center;
+	}
+	/* the month adn year of the calendar */
+	div#monthAndYear.card-header{
+		background-color: #233C63;
+		color: #F0F8FF;
+		font-size: 30px;
+		margin-top: 20px;
+		font-weight: bolder;
+		text-align: center;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	div.card{
+	}
+
+	/* the actual calendar itself */
+	/* #calendar.table{
+	  top: 50%;
+	  width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	  text-align: center;
+		font-size: 24px;
+	} */
+	/* button styling  */
+
+	button{
+	  color: #525B71;
+		background-color: #f9faff;
+	  border: none;
+	  padding: 5px 5px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 14px;
+	  width: 70px;
+	  margin: 0 auto;
+	}
+
+	button:hover{
+		background-color: #525B71;
+	  border: none;
+	  color: #fbfdfe;
+
+	}
+
+
+	div.form-inline{
+	  top: 50%;
+	  width: 100%;
+	  text-align: center;
+		font-size: 20px;
+		outline-color: #384267;
+	}
+
+	form#form{
+		/* padding-left: 15px; */
+		outline-color: #384267;
+	}
+
+	#all_day{
+		top: 20px;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #383D36;
+	}
+
+	#specified_time{
+		top: 20px;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #383D36;
+	}
+
+	/* button formatting */
+	a:link, a:visited {
+		position: relative;
+		font-size: 18px;
+		/* margin-left: 20px; */
+	  padding: 10px 20px;
+	  text-align: center;
+		/* background-color: #525B71; */
+		color: #525B71;
+	  text-decoration: none;
+	  display: inline-block;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	a:hover, a:active {
+	  background-color: #525B71;
+	  color: #F0F8FF;
+	}
+
+	/* hostd the colemsn */
+	.column {
+	  float: left;
+	  padding: 10px;
+		/* margin: 35px; */
+	}
+
+	/* calendar section */
+	.left {
+	  width: 49%;
+		outline-color: #332622;
+
+
+	}
+	/* upcoming event, add event, adn events of the day sections */
+	.right {
+	  width: 50%;
+	}
+
+	/* upcoming event section  */
+	.uE{
+		text-align: center;
+	  border: 2px solid #384267;
+		padding-bottom: 10px;
+	}
+
+	/* add event button section */
+	.aE{
+		margin-top: 20px;
+		text-align: center;
+	  border: 2px solid #242224;
+	}
+	/* //events of the day section */
+	#listedEvents{
+		/* margin-top: 20px; */
+		padding-top: 10px;
+		padding-left: 10px;
+		/* border: 2px solid #F0F8FF; */
+		height: 450px;
+		background-color: rgba(255, 255, 255, .4);
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.listedForm{
+		/* margin-top: 20px; */
+		padding-top: 10px;
+		padding-left: 13%;
+		/* border: 2px solid #F0F8FF; */
+		height: 450px;
+		background-color: rgba(255, 255, 255, .4);
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+	/* title: calm and collected calendar */
+	.lef {
+	  width: 70%;
+		outline-color: #242224;
+		/* font-size: 48px; */
+	  text-align: left;
+		/* color: #242224; */
+		font-weight: bolder;
+		padding-top: 30px;
+		padding-bottom: 45px;
+		padding-left: 5%;
+		/* margin-bottom: 10px; */
+
+		Style:normal;
+	 	weight:700;
+	 	font-Size:56px;
+	 	line-Height:54px;
+		/* margin-top: auto;
+		margin-bottom: auto; */
+	}
+
+	/* welcome, ____! and logout button  */
+	.righ {
+		padding-top: 15px;
+	  width: 29%;
+		outline-color: #242224;
+		/* font-size: 24px; */
+	  text-align: right;
+		/* color: #242224; */
+		padding-top: 30px;
+		padding-bottom: 45px;
+		padding-right: 5%;
+		/* margin-top: auto;
+		margin-bottom: auto; */
+	}
+
+	.columnForm{
+		width: 70%;
+		outline-color: #242224;
+		font-size: 48px;
+	  text-align: left;
+		color: #242224;
+		font-weight: bolder;
+		padding-top: 35px;
+		padding-bottom: 50px;
+	}
+
+	.row{
+		position: relative;
+		height: 100%;
+		/* margin-top: 10px; */
+		padding-bottom: 10px;
+	}
+
+	.roww{
+		outline-color: #242224;
+		font-size: 24px;
+		text-align: right;
+		color: #242224;
+		padding-top: 35px;
+	}
+
+	th {
+	  border: 2px solid #233C63;
+	  text-align: left;
+	  padding: 5px;
+		background-color: rgba(255, 255, 255, .4);
+		text-align: center;
+
+	}
+
+	td{
+	  border: 2px solid #233C63;
+	  text-align: left;
+	  padding: 5px;
+		height: 500px;
+		width: 14%;
+		background-color: rgba(255, 255, 255, .4);
+		vertical-align: text-top;
+	}
+
+	table {
+		margin-left: auto;
+		margin-right: auto;
+	  width: 90%;
+		border-collapse: collapse;
+		/* border-collapse-left: none;   */
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	input#makeEvent:link, input#makeEvent:visited{
+		position: relative;
+		font-size: 18px;
+		margin-left: 20px;
+	  padding: 10px 20px;
+	  text-align: center;
+		/* background-color: #525B71; */
+		color: #525B71;
+	  text-decoration: none;
+	  display: inline-block;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	input#makeEvent:hover, input#makeEvent:active {
+	  background-color: #525B71;
+	  color: #fff;
+	}
+
+	#user{
+		padding-right: 30px;
+	}
+
+	/* FORM STYLEEEE!!! */
+
+	p#name{
+		font-weight: bold;
+		/* margin-left: auto;
+		margin-right: auto; */
+	}
+
+	span#notBold{
+		font-weight: normal;
+		padding-top: 9px;
+	}
+
+	p#time{
+		font-weight: bold;
+		padding-bottom: 2px;
+	}
+
+	select,input{
+		font-family: Optima;
+		/* font-weight: bold; */
+		font-size: 18px;
+		background-color: rgba(255,255,255,.3);
+		border-width: .1px;
+	}
+
+	p#location, p#description{
+		font-weight: bold;
+	}
+
+
+	form#form{
+		 position: relative;
+	}
+
+	input#makeEvent {
+	    font-size: 15px;
+	    font-weight: bold;
+	    position: relative;
+	  	font-size: 18px;
+	  	/* margin-left: 20px; */
+	    padding: 10px 20px;
+	    text-align: center;
+	  	background-color: rgba(0, 0, 0, 0);
+	    border-radius: 0px;
+	  	color: #525B71;
+	    text-decoration: none;
+	    display: inline-block;
+	  	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	    font-family: Optima;
+	    margin-top: 10px;
+	    border-color: rgba(0,0,0,0);
+			margin-left: auto;
+			margin-right: auto;
+			position: absolute;
+			left: 37%;
+
+	}
+
+
+	input#makeEvent:hover {
+	  background-color: #525B71;
+	  color: #F0F8FF;
+	}
+
+	.dateTime{
+		font-weight: lighter;
+		font-style: italic;
+		font-size: 16px;
+	}
+	
+	a#plus:link a#plus:visited{
+		font-weight: bold;
+		font-style: normal;
+		font-size: 30px;
+		padding: 0px 0px;
+		text-align: left;
+		text-decoration: none;
+ 	    display: inline-block;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+	
+	/* Popup container - can be anything you want */
+.popup {
+position: relative;
+display: inline-block;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+color: #525B71;
+background-color: rgba(0,0,0,0); 
+border-radius: 50%;
+background: rgba(0,0,0,0); 
+width: 16px;
+height: 16px;
+text-align: center;
+}
+
+.popup:hover{
+	color: #F0F8FF;
+	background-color: #525B71; 
+	border-radius: 50%;
+	background: #525B71; 
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+/* The actual popup */
+.popup .popuptext {
+visibility: hidden;
+width: 160px;
+background-color: #31669F;
+color: #F0F8FF;
+text-align: center;
+border-radius: 6px;
+padding: 8px 0;
+position: absolute;
+z-index: 1;
+top: 125%;
+left: 50%;
+margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #31669F transparent transparent transparent;
+
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+	
 	</style>
 
 
@@ -289,11 +775,9 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										console.log(events[i].timeStartHour);
-										console.log(events[i].timeStartMinute);
-										console.log(events[i].timeEndHour);
-										console.log(events[i].timeEndMinute);
 										day0 += events[i].name+"<br>";
+										day0 += "<div class='dateTime'>";
+										
 										day0 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day0 += "AM";
@@ -306,6 +790,11 @@
 										} else{
 											day0 += "PM";
 										}
+										day0 += "</div>";
+										day0 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day0 += " &oplus; ";
+										day0 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day0 += "</div>";
 										day0 += "<br><br>";
 										
 									}
@@ -325,7 +814,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day1 += events[i].name+"<br><br>";
+											day1 += events[i].name+"<br>";
+											day1 += "<div class='dateTime'>";
+											
+											day1 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day1 += "AM";
+											} else{
+												day1 += "PM";
+											}
+											day1 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day1 += "AM";
+											} else{
+												day1 += "PM";
+											}
+											day1 += "</div>";
+											day1 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day1 += " &oplus; ";
+											day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day1 += "</div>";
+											day1 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -342,7 +851,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day1 += events[i].name+"<br><br>";
+										day1 += events[i].name+"<br>";
+										day1 += "<div class='dateTime'>";
+										
+										day1 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day1 += "AM";
+										} else{
+											day1 += "PM";
+										}
+										day1 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day1 += "AM";
+										} else{
+											day1 += "PM";
+										}
+										day1 += "</div>";
+										day1 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day1 += " &oplus; ";
+										day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day1 += "</div>";
+										day1 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -359,7 +888,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day2 += events[i].name+"<br><br>";
+											day2 += events[i].name+"<br>";
+											day2 += "<div class='dateTime'>";
+											
+											day2 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day2 += "AM";
+											} else{
+												day2 += "PM";
+											}
+											day2 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day2 += "AM";
+											} else{
+												day2 += "PM";
+											}
+											day2 += "</div>";
+											day2 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day2 += " &oplus; ";
+											day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day2 += "</div>";
+											day2 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -376,7 +925,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day2 += events[i].name+"<br><br>";
+										day2 += events[i].name+"<br>";
+										day2 += "<div class='dateTime'>";
+										
+										day2 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day2 += "AM";
+										} else{
+											day2 += "PM";
+										}
+										day2 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day2 += "AM";
+										} else{
+											day2 += "PM";
+										}
+										day2 += "</div>";
+										day2 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day2 += " &oplus; ";
+										day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day2 += "</div>";
+										day2 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -393,7 +962,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day3 += events[i].name+"<br><br>";
+											day3 += events[i].name+"<br>";
+											day3 += "<div class='dateTime'>";
+											
+											day3 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day3 += "AM";
+											} else{
+												day3 += "PM";
+											}
+											day3 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day3 += "AM";
+											} else{
+												day3 += "PM";
+											}
+											day3 += "</div>";
+											day3 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day3 += " &oplus; ";
+											day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day3 += "</div>";
+											day3 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -410,7 +999,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day3 += events[i].name+"<br><br>";
+										day3 += events[i].name+"<br>";
+										day3 += "<div class='dateTime'>";
+										
+										day3 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day3 += "AM";
+										} else{
+											day3 += "PM";
+										}
+										day3 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day3 += "AM";
+										} else{
+											day3 += "PM";
+										}
+										day3 += "</div>";
+										day3 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day3 += " &oplus; ";
+										day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day3 += "</div>";
+										day3 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -427,7 +1036,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day4 += events[i].name+"<br><br>";
+											day4 += events[i].name+"<br>";
+											day4 += "<div class='dateTime'>";
+											
+											day4 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day4 += "AM";
+											} else{
+												day4 += "PM";
+											}
+											day4 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day4 += "AM";
+											} else{
+												day4 += "PM";
+											}
+											day4 += "</div>";
+											day4 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day4 += " &oplus; ";
+											day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day4 += "</div>";
+											day4 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -444,7 +1073,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day4 += events[i].name+"<br><br>";
+										day4 += events[i].name+"<br>";
+										day4 += "<div class='dateTime'>";
+										
+										day4 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day4 += "AM";
+										} else{
+											day4 += "PM";
+										}
+										day4 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day4 += "AM";
+										} else{
+											day4 += "PM";
+										}
+										day4 += "</div>";
+										day4 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day4 += " &oplus; ";
+										day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day4 += "</div>";
+										day4 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -461,7 +1110,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day5 += events[i].name+"<br><br>";
+											day5 += events[i].name+"<br>";
+											day5 += "<div class='dateTime'>";
+											
+											day5 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day5 += "AM";
+											} else{
+												day5 += "PM";
+											}
+											day5 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day5 += "AM";
+											} else{
+												day5 += "PM";
+											}
+											day5 += "</div>";
+											day5 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day5 += " &oplus; ";
+											day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day5 += "</div>";
+											day5 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -478,7 +1147,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day5 += events[i].name+"<br><br>";
+										day5 += events[i].name+"<br>";
+										day5 += "<div class='dateTime'>";
+										
+										day5 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day5 += "AM";
+										} else{
+											day5 += "PM";
+										}
+										day5 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day5 += "AM";
+										} else{
+											day5 += "PM";
+										}
+										day5 += "</div>";
+										day5 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day5 += " &oplus; ";
+										day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day5 += "</div>";
+										day5 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -495,7 +1184,27 @@
 									if(events[i].year == year + mod){
 										if(((month + 1) % 12) == events[i].month) {
 											check = true;
-											day6 += events[i].name+"<br><br>";
+											day6 += events[i].name+"<br>";
+											day6 += "<div class='dateTime'>";
+											
+											day6 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+											if(events[i].start_am_or_pm==1){
+												day6 += "AM";
+											} else{
+												day6 += "PM";
+											}
+											day6 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+											if(events[i].end_am_or_pm==1){
+												day6 += "AM";
+											} else{
+												day6 += "PM";
+											}
+											day6 += "</div>";
+											day6 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day6 += " &oplus; ";
+											day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+											day6 += "</div>";
+											day6 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
 											check = true;
@@ -512,7 +1221,27 @@
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
-										day6 += events[i].name+"<br><br>";
+										day6 += events[i].name+"<br>";
+										day6 += "<div class='dateTime'>";
+										
+										day6 += events[i].timeStartHour+":"+events[i].timeStartMinute;
+										if(events[i].start_am_or_pm==1){
+											day6 += "AM";
+										} else{
+											day6 += "PM";
+										}
+										day6 += " - "+events[i].timeEndHour+":"+events[i].timeEndMinute;
+										if(events[i].end_am_or_pm==1){
+											day6 += "AM";
+										} else{
+											day6 += "PM";
+										}
+										day6 += "</div>";
+										day6 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day6 += " &oplus; ";
+										day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
+										day6 += "</div>";
+										day6 += "<br><br>";
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -549,6 +1278,11 @@
 			document.getElementById("listedEvents").innerHTML = otherEvents;
 
 
+		}
+		
+		function seeMore(i){
+			var popup = document.getElementById("myPopup"+i);
+  			popup.classList.toggle("show");
 		}
 
 		function Event(name, location, description, day, month, year,
