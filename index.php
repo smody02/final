@@ -12,6 +12,7 @@
 		background-size: 100%;
 		position: relative;
 		color: #332622;
+		background-position: center;
 	}
 
 	.text{
