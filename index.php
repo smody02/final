@@ -251,28 +251,37 @@
 				//if month, day and year match today put in event0
 
 					//ORIGINAL CODE
-					if(month == events[i].month && events[i].year == year){
-						if(events[i].day == day)
-							day0 += events[i].name+"<br><br>";
-						else if(events[i].day == day+1)
-							day1 += events[i].name+"<br><br>";
-						else if(events[i].day == day+2)
-							day2 += events[i].name+"<br><br>";	
-						else if(events[i].day == day+3)
-							day3 += events[i].name+"<br><br>";
-						else if(events[i].day == day+4)
-							day4 += events[i].name+"<br><br>";
-						else if(events[i].day == day+5)
-							day5 += events[i].name+"<br><br>";
-						else if(events[i].day == day+6)
-							day6 += events[i].name+"<br><br>";
-						else{
+					if(events[i].year == year){
+						if(month == events[i].month){
+							if(events[i].day == day)
+								day0 += events[i].name+"<br><br>";
+							else if(events[i].day == day+1)
+								day1 += events[i].name+"<br><br>";
+							else if(events[i].day == day+2)
+								day2 += events[i].name+"<br><br>";	
+							else if(events[i].day == day+3)
+								day3 += events[i].name+"<br><br>";
+							else if(events[i].day == day+4)
+								day4 += events[i].name+"<br><br>";
+							else if(events[i].day == day+5)
+								day5 += events[i].name+"<br><br>";
+							else if(events[i].day == day+6)
+								day6 += events[i].name+"<br><br>";
+							//this month and year, later day
+							else if(events[i].day > day){
+								otherEvents += events[i].name+"<br><br>";
+							}
+						}
+						//this year, later month
+						else if(events[i].month > month){
 							otherEvents += events[i].name+"<br><br>";
 						}
 					}
-					else{
-						
+					//later year
+					else if(events[i].year > year){
+						otherEvents += events[i].name+"<br><br>";
 					}
+					
 					
 				}
 
