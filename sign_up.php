@@ -4,11 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- <link rel='stylesheet' type="text/css" href="style2.css" /> -->
 <title>C&C Calendar Sign Up</title>
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 <style>
 
 body {
@@ -196,7 +192,7 @@ hr{
             <input type="submit" class="btn btn-primary btn-lg" value="Sign Up" name="register_btn"/>
         </div>
     </form>
-	<div class="hint-text"> <span id="already" > Already have an account? </span> <a href="sign_in.html">Login here</a></div>
+	<div class="hint-text"> <span id="already" > Already have an account? </span> <a href="sign_in.php">Login here</a></div>
 </div>
 <!-- </div> -->
 </body>
