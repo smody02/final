@@ -268,38 +268,12 @@
 			day5 = "";
 			day6 = "";
 			otherEvents = "";
-<<<<<<< Updated upstream
-
-			console.log("today is ... "+day);
-=======
 			
->>>>>>> Stashed changes
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				//if month, day and year match today put in event0
 
 					//ORIGINAL CODE
-<<<<<<< Updated upstream
-					if(events[i].year == year){
-						if(month == events[i].month){
-							if(events[i].day == day)
-								day0 += events[i].name+"<br><br>";
-							else if(events[i].day == day+1)
-								day1 += events[i].name+"<br><br>";
-							else if(events[i].day == day+2)
-								day2 += events[i].name+"<br><br>";
-							else if(events[i].day == day+3)
-								day3 += events[i].name+"<br><br>";
-							else if(events[i].day == day+4)
-								day4 += events[i].name+"<br><br>";
-							else if(events[i].day == day+5)
-								day5 += events[i].name+"<br><br>";
-							else if(events[i].day == day+6)
-								day6 += events[i].name+"<br><br>";
-							//this month and year, later day
-							else if(events[i].day > day){
-								otherEvents += events[i].name+"<br><br>";
-=======
 					// if(events[i].year == year){
 					// 	if(month == events[i].month){
 							
@@ -542,22 +516,11 @@
 								else if(events[i].year > year){
 									otherEvents += events[i].name+"<br><br>";
 								}
->>>>>>> Stashed changes
+
 							}
 					}
 					//later year
-<<<<<<< Updated upstream
-					else if(events[i].year > year){
-						otherEvents += events[i].name+"<br><br>";
-					}
-
-
-				}
-
-
-=======
-			
->>>>>>> Stashed changes
+					
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
 			document.getElementById("event2").innerHTML = day2;
