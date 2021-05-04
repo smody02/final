@@ -132,6 +132,11 @@ a:hover, a:active {
 </style>
 </head>
 <body>
+    <div class="column lef" >
+	<div id="title">
+	Calm & Collected Calendar
+</div>
+</div>
 <!-- <div id="plsCenter" > -->
 <div class="signup-form">
     <form method="post" action="sign_up.php">

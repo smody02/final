@@ -62,6 +62,7 @@ function getUserById($id){
 
 function display_error() {
 	global $errors;
+    console.log("in display errors");
 
 	if (count($errors) > 0){
 		echo '<div class="error">';
@@ -70,6 +71,11 @@ function display_error() {
 			}
 		echo '</div>';
 	}
+}
+
+function hello(){
+    console.log("hello");
+    //echo "hello";
 }
 
 if (isset($_GET['logout'])) {

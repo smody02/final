@@ -127,6 +127,11 @@ a:hover, a:active {
 </style>
 </head>
 <body>
+    <div class="column lef" >
+    <div id="title">
+    Calm & Collected Calendar
+    </div>
+    </div>
 <div class="login-form">
     <form method="post" action="sign_in.php">
         <h2 class="text-center">Log in</h2>

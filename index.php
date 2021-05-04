@@ -320,6 +320,7 @@
 		?>
 
 		<?php test($names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
+		<?php hello();?>
 
 		var n = <?php echo json_encode($names) ?>;
 		var l = <?php echo json_encode($locals) ?>;
@@ -340,9 +341,6 @@
 			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
 		}
 		console.log(events.length);
-
-
-
 
 	</script>
 </head>
@@ -427,21 +425,6 @@
         </table>
     </div>
 </div>
-
-<!--<button name="jump" onclick="jump()">Go</button>-->
-<script src="scripts.js"></script>
-
-<!-- Optional JavaScript for bootstrap -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
 
 	<div class="row">
 	<div class="column left" >
@@ -543,8 +526,8 @@
 					<option value=55>55</option>
 				</select>
 				<span>AM/PM:</span><select name="start_am_or_pm">
-					<option value=0>AM</option>
-					<option value=1>PM</option>
+					<option value=1>AM</option>
+					<option value=2>PM</option>
 				</select><br>
 			End Time:<span style="margin-left: 2px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
 				<span>Hour:</span><select name = "end_hour">
@@ -576,13 +559,14 @@
 					<option value=55>55</option>
 				</select>
 				<span>AM/PM:</span><select name="end_am_or_pm">
-					<option value=0>AM</option>
-					<option value=1>PM</option>
+					<option value=1>AM</option>
+					<option value=2>PM</option>
 				</select>
 			</p>
 			<p id = "location">Location <input type="text" name = "location"></p>
 			<p id="description">Description: <br><br><input type="text" name = "description"></p>
 			<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
+			
 		</form>
 		</div>
 	</div>
