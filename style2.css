@@ -1,22 +1,30 @@
 body,html {
 		font-size: 20px;
-		font-family: Spectral, serif;
+		font-family: Optima;
+
 		/* background-color: #f9faff ; */
-    color: #241C19;
+    color: #332622;
     margin-bottom: 30px;
 	}
 	* {
   box-sizing: border-box;
-	color: #241C19;
+	color: #332622;
 
 }
 
-div.title{
-	margin-left: 10px;
+div#title{
+	margin-left: 20px;
+	font-family: Optima;
 	/* background-color: rgba(255, 255, 255, .4);
 	 */
-	 font-family: Rubik, sans-serif;
-	 color: #241C19;
+	 /* font-family: Rubik, sans-serif; */
+	 /* color: #332622; */
+
+	 /* Font Family: “myriad-pro-1”, “myriad-pro-2”, HelveticaNeue, Helvetica, Arial, serif;
+	 Style:normal;
+	Weight:700;
+	Font Size:50px;
+	Line Height:54px; */
 }
 
 /* inspirational quote section   */
@@ -27,10 +35,10 @@ div.title{
 	height:15%;
 	padding: 20px;
 	box-sizing:border-box;
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	font-weight: lighter;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	/* color: #241C19; */
+	/* color: #332622; */
 }
 
 
@@ -62,7 +70,7 @@ div#plsCenterGreen {
 /* the month adn year of the calendar */
 div#monthAndYear.card-header{
 	background-color: #233C63;
-	color: #fff;
+	color: #F0F8FF;
 	font-size: 30px;
 	margin-top: 20px;
 	font-weight: bolder;
@@ -88,7 +96,7 @@ div.card{
 /* button styling  */
 
 button{
-  color: #1D5B7A;
+  color: #525B71;
 	background-color: #f9faff;
   border: none;
   padding: 5px 5px;
@@ -101,7 +109,7 @@ button{
 }
 
 button:hover{
-	background-color: #1D5B7A;
+	background-color: #525B71;
   border: none;
   color: #fbfdfe;
 
@@ -146,15 +154,15 @@ a:link, a:visited {
 	/* margin-left: 20px; */
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #1D5B7A; */
-	color: #1D5B7A;
+	/* background-color: #525B71; */
+	color: #525B71;
   text-decoration: none;
   display: inline-block;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 a:hover, a:active {
-  background-color: #1D5B7A;
+  background-color: #525B71;
   color: #F0F8FF;
 }
 
@@ -168,7 +176,7 @@ a:hover, a:active {
 /* calendar section */
 .left {
   width: 49%;
-	outline-color: #233C63;
+	outline-color: #332622;
 
 
 }
@@ -214,24 +222,35 @@ a:hover, a:active {
 .lef {
   width: 70%;
 	outline-color: #242224;
-	font-size: 48px;
+	/* font-size: 48px; */
   text-align: left;
-	color: #242224;
+	/* color: #242224; */
 	font-weight: bolder;
-	padding-top: 35px;
-	padding-bottom: 50px;
-	margin-bottom: 10px;
+	padding-top: 30px;
+	padding-bottom: 45px;
+	padding-left: 5%;
+	/* margin-bottom: 10px; */
+
+	Style:normal;
+ 	weight:700;
+ 	font-Size:56px;
+ 	line-Height:54px;
+	/* margin-top: auto;
+	margin-bottom: auto; */
 }
 
 /* welcome, ____! and logout button  */
 .righ {
+	padding-top: 15px;
   width: 29%;
 	outline-color: #242224;
-	font-size: 24px;
+	/* font-size: 24px; */
   text-align: right;
-	color: #242224;
-	padding-top: 35px;
-	padding-bottom: 50px;
+	/* color: #242224; */
+	padding-top: 30px;
+	padding-bottom: 45px;
+	/* margin-top: auto;
+	margin-bottom: auto; */
 }
 
 .columnForm{
@@ -261,19 +280,22 @@ a:hover, a:active {
 }
 
 th {
-  border: 2px solid #242224;
+  border: 2px solid #233C63;
   text-align: left;
   padding: 5px;
 	background-color: rgba(255, 255, 255, .4);
+	text-align: center;
+
 }
 
 td{
-  border: 2px solid #242224;
+  border: 2px solid #233C63;
   text-align: left;
   padding: 5px;
 	height: 500px;
 	width: 14%;
 	background-color: rgba(255, 255, 255, .4);
+	vertical-align: text-top;
 }
 
 table {
@@ -291,15 +313,15 @@ input#makeEvent:link, input#makeEvent:visited{
 	margin-left: 20px;
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #1D5B7A; */
-	color: #1D5B7A;
+	/* background-color: #525B71; */
+	color: #525B71;
   text-decoration: none;
   display: inline-block;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 input#makeEvent:hover, input#makeEvent:active {
-  background-color: #1D5B7A;
+  background-color: #525B71;
   color: #fff;
 }
 

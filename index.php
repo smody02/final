@@ -11,18 +11,13 @@
 		background-attachment: fixed;
 		background-size: 100%;
 		position: relative;
-		color: #241C19;
+		color: #332622;
 	}
 
 	.text{
-		color: #241C19;
+		color: #332622;
 	}
 
-.title{
-		margin-left: 10px;
-		 font-family: Rubik, sans-serif;
-		 color: #241C19;
-	}
 
 
 	</style>

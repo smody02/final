@@ -43,8 +43,8 @@ body {
   	/* margin-left: 20px; */
     padding: 10px 20px;
     text-align: center;
-  	/* background-color: #1D5B7A; */
-  	color: #1D5B7A;
+  	/* background-color: #525B71; */
+  	color: #525B71;
     text-decoration: none;
     outline: none;
     border-color: #000;
@@ -65,17 +65,17 @@ body {
     text-align: center;
   	background-color: rgba(0, 0, 0, 0);
     border-radius: 0px;
-  	color: #1D5B7A;
+  	color: #525B71;
     text-decoration: none;
     display: inline-block;
   	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    font-family: Spectral, serif;
+    font-family: Optima;
     margin-top: 10px;
     border-color: rgba(0,0,0,0);
 }
 
 .btn:hover {
-  background-color: #1D5B7A;
+  background-color: #525B71;
   color: #F0F8FF;
 }
 
@@ -87,11 +87,11 @@ body {
 }
 
 #signIn{
-  font-family: Rubik, sans-serif;
+  font-family: Optima;
 }
 
 input.form-control{
-  font-family: Spectral, serif;
+  font-family: Optima;
   text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -110,17 +110,17 @@ a:link, a:visited {
 	/* margin-left: 20px; */
   padding: 10px 20px;
   text-align: center;
-	/* background-color: #1D5B7A; */
-	color: #1D5B7A;
+	/* background-color: #525B71; */
+	color: #525B71;
   text-decoration: none;
   display: inline-block;
   /* background-color: #F4AF74; */
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  font-family: Spectral, serif;
+  font-family: Optima;
 }
 
 a:hover, a:active {
-  background-color: #1D5B7A;
+  background-color: #525B71;
   color: #F0F8FF;
 }
 
