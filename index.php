@@ -261,7 +261,6 @@
 			this.end_am_or_pm=end_am_or_pm;
 		}
 
-
 		//make javascript array from php arrays
 		events = new Array();
 		later_events = new Array();
@@ -544,7 +543,7 @@
 				</select>
 			</p>
 			<p id = "location">Location <input type="text" name = "location"></p>
-			<p id="description">Desription: <br><br><input type="text" name = "description"></p>
+			<p id="description">Description: <br><br><input type="text" name = "description"></p>
 			<input id="makeEvent" type = "submit" value = "Make Event" name="event_btn">
 		</form>
 		</div>
