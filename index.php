@@ -489,17 +489,6 @@ left: 50%;
 margin-left: -80px;
 }
 
-/* Popup arrow */
-/* .popup .popuptext::after {
-content: "";
-position: absolute;
-bottom: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #233c63 transparent transparent transparent;
-
 } */
 
 /* Toggle this class - hide and show the popup */
