@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -73,11 +72,6 @@ function display_error() {
     echo '</div>';
 	}
     
-}
-
-function hello(){
-    console.log("hello");
-    //echo "hello";
 }
 
 if (isset($_GET['logout'])) {
@@ -195,12 +189,13 @@ function event(){
 }
 
 //need to put all events into php arrays for current user
-function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstarthour, &$tstartmin, &$tendhour, &$tendmin, &$samorpm, &$eamorpm){
+function test(&$id, &$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstarthour, &$tstartmin, &$tendhour, &$tendmin, &$samorpm, &$eamorpm){
     global $conn;
 	
     $query = "SELECT * FROM events WHERE userID = " . $_SESSION['user']['id'] . " ORDER BY year, month, day, start_am_or_pm, timeStartHour, timeStartMinute ASC";
 	if($result = $conn->query($query)){
         while($row = $result->fetch_assoc()){
+            array_push($id, $row["id"]);
             array_push($names, $row["name"]);
 			array_push($locals, $row["location"]);
             array_push($descrips, $row["description"]);
@@ -215,6 +210,22 @@ function test(&$names, &$locals, &$descrips, &$days, &$months, &$years, &$tstart
             array_push($eamorpm, $row["end_am_or_pm"]);
         }
     }
+}
+
+if (isset($_POST['delete_btn'])) {
+    deleteEvent();
+}
+
+function deleteEvent(){
+    global $conn;
+    $id = $_POST['id'];
+    
+    $query = "DELETE FROM events WHERE id = " . $id;
+    
+    $conn->query($query);
+    
+    header('location: index.php');
+    
 }
 
 ?>
