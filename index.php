@@ -459,7 +459,6 @@ cursor: pointer;
 user-select: none;
 color: #533D61;
 background-color: rgba(0,0,0,0); 
-border-radius: 50%;
 background: rgba(0,0,0,0); 
 width: 16px;
 height: 16px;
@@ -469,7 +468,6 @@ text-align: center;
 .popup:hover{
 	color: #F0F8FF;
 	background-color: #533D61; 
-	/* border-radius: 50%; */
 	width: 20px;
 	height: 20px;
 	text-align: center;
@@ -520,6 +518,50 @@ to {opacity: 1;}
 @keyframes fadeIn {
 from {opacity: 0;}
 to {opacity:1 ;}
+}
+
+input#delete_btn{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #533D61;
+	text-align: center;
+	/* font-style: italic; */
+	font-size: 16px;
+	font-weight: lighter;
+	border-width: 0px;
+	background-color: rgba(0,0,0,0);
+}
+
+input#delete_btn:hover{
+	color: #F0F8FF;
+	background-color: #533D61; 
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+form#deleteForm{
+	padding: 0px;
+	margin-left: 7px;
+	margin: 0px;
+	width: 0px;
+	border-width: .1px;
+	/* border-collapse: none; */
+	display: inline;
+	
+}
+
+input#hidden{
+	margin-bottom: 0 !important;
+	z-index: 1;
+	width: 0px;
+	height: 0px;
+	display: none;
 }
 	
 	</style>
@@ -809,10 +851,13 @@ to {opacity:1 ;}
 											day0 += "PM";
 										}
 										day0 += "</div>";
-										day0 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day0 += "<div>"
+										day0 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day0 += " &or;";
 										day0 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day0 += "</div>";
+										day0 += "</span>";
+										day0 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day0 += "</div>"
 										day0 += "<br><br>";
 										
 									}
@@ -848,10 +893,13 @@ to {opacity:1 ;}
 												day1 += "PM";
 											}
 											day1 += "</div>";
-											day1 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day1 += "<div>"
+											day1 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day1 += " &or;";
 											day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day1 += "</div>";
+											day1 += "</span>";
+											day1 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day1 += "</div>"
 											day1 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -885,10 +933,13 @@ to {opacity:1 ;}
 											day1 += "PM";
 										}
 										day1 += "</div>";
-										day1 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day1 += "<div>"
+										day1 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day1 += " &or;";
 										day1 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day1 += "</div>";
+										day1 += "</span>";
+										day1 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day1 += "</div>"
 										day1 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -922,10 +973,13 @@ to {opacity:1 ;}
 												day2 += "PM";
 											}
 											day2 += "</div>";
-											day2 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day2 += "<div>"
+											day2 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day2 += " &or;";
 											day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day2 += "</div>";
+											day2 += "</span>";
+											day2 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day2 += "</div>"
 											day2 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -959,10 +1013,13 @@ to {opacity:1 ;}
 											day2 += "PM";
 										}
 										day2 += "</div>";
-										day2 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day2 += "<div>"
+										day2 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day2 += " &or;";
 										day2 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day2 += "</div>";
+										day2 += "</span>";
+										day2 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day2 += "</div>"
 										day2 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -996,10 +1053,13 @@ to {opacity:1 ;}
 												day3 += "PM";
 											}
 											day3 += "</div>";
-											day3 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day3 += "<div>"
+											day3 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day3 += " &or;";
 											day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day3 += "</div>";
+											day3 += "</span>";
+											day3 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day3 += "</div>"
 											day3 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -1033,10 +1093,13 @@ to {opacity:1 ;}
 											day3 += "PM";
 										}
 										day3 += "</div>";
-										day3 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day3 += "<div>"
+										day3 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day3 += " &or;";
 										day3 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day3 += "</div>";
+										day3 += "</span>";
+										day3 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day3 += "</div>"
 										day3 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -1070,10 +1133,13 @@ to {opacity:1 ;}
 												day4 += "PM";
 											}
 											day4 += "</div>";
-											day4 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day4 += "<div>"
+											day4 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day4 += " &or;";
 											day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day4 += "</div>";
+											day4 += "</span>";
+											day4 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day4 += "</div>"
 											day4 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -1107,10 +1173,13 @@ to {opacity:1 ;}
 											day4 += "PM";
 										}
 										day4 += "</div>";
-										day4 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day4 += "<div>"
+										day4 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day4 += " &or;";
 										day4 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day4 += "</div>";
+										day4 += "</span>";
+										day4 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day4 += "</div>"
 										day4 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -1144,10 +1213,13 @@ to {opacity:1 ;}
 												day5 += "PM";
 											}
 											day5 += "</div>";
-											day5 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day5 += "<div>"
+											day5 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day5 += " &or;";
 											day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day5 += "</div>";
+											day5 += "</span>";
+											day5 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day5 += "</div>"
 											day5 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -1181,10 +1253,13 @@ to {opacity:1 ;}
 											day5 += "PM";
 										}
 										day5 += "</div>";
-										day5 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day5 += "<div>"
+										day5 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day5 += " &or;";
 										day5 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day5 += "</div>";
+										day5 += "</span>";
+										day5 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day5 += "</div>"
 										day5 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -1218,10 +1293,13 @@ to {opacity:1 ;}
 												day6 += "PM";
 											}
 											day6 += "</div>";
-											day6 += "<div class='popup' onclick='seeMore("+i+")'>";
+											day6 += "<div>"
+											day6 += "<span class='popup' onclick='seeMore("+i+")'>";
 											day6 += " &or;";
 											day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-											day6 += "</div>";
+											day6 += "</span>";
+											day6 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+											day6 += "</div>"
 											day6 += "<br><br>";
 										}
 										else if (events[i].month > ((month + 1) % 12)) {
@@ -1255,10 +1333,13 @@ to {opacity:1 ;}
 											day6 += "PM";
 										}
 										day6 += "</div>";
-										day6 += "<div class='popup' onclick='seeMore("+i+")'>";
+										day6 += "<div>"
+										day6 += "<span class='popup' onclick='seeMore("+i+")'>";
 										day6 += " &or;";
 										day6 += "<span class='popuptext' id='myPopup"+i+"'>"+"Location: "+events[i].location+"<br><br>Description: "+events[i].description+"</span>";
-										day6 += "</div>";
+										day6 += "</span>";
+										day6 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
+										day6 += "</div>"
 										day6 += "<br><br>";
 									}
 									else if (events[i].month > month) {
@@ -1303,10 +1384,11 @@ to {opacity:1 ;}
   			popup.classList.toggle("show");
 		}
 
-		function Event(name, location, description, day, month, year,
+		function Event(id, name, location, description, day, month, year,
 				       timeStartHour, timeStartMinute, timeEndHour,
 					   timeEndMinute, start_am_or_pm, end_am_or_pm)
 		{
+			this.id = id;
 			this.name=name;
 			this.location=location;
 			this.description=description;
@@ -1339,6 +1421,7 @@ to {opacity:1 ;}
 
 		<?php
 		//php array definitions, for global access
+		$id = array();
 		$names = array();
 		$locals = array();
 		$descrips = array();
@@ -1353,9 +1436,9 @@ to {opacity:1 ;}
 		$eamorpm = array();
 		?>
 
-		<?php test($names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
-		<?php hello();?>
+		<?php test($id, $names, $locals, $descrips, $days, $months, $years, $tstarthour, $tstartmin, $tendhour, $tendmin, $samorpm, $eamorpm);?>
 
+		var id = <?php echo json_encode($id) ?>;
 		var n = <?php echo json_encode($names) ?>;
 		var l = <?php echo json_encode($locals) ?>;
 		var d = <?php echo json_encode($descrips) ?>;
@@ -1372,7 +1455,7 @@ to {opacity:1 ;}
 		var n_length = <?php echo json_encode(sizeof($names), JSON_HEX_TAG); ?>;
 
 		for(var i = 0; i < n_length; i++){
-			events.push(new Event(n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
+			events.push(new Event(id[i],n[i],l[i],d[i],d2[i],m[i],y[i],s[i],s2[i],e[i],e2[i],sa[i],ea[i]));
 		}
 
 	</script>
