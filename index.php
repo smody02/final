@@ -422,8 +422,8 @@
 	.error{
 	    /* visibility: hidden; */
 	    width: 160px;
-	    background-color: #31669F;
-	    color: #F0F8FF;
+	    background-color: rgba(142, 122, 155, .5);
+	    color: #242224;
 	    text-align: center;
 	    border-radius: 6px;
 	    padding: 8px 0;
@@ -479,7 +479,7 @@ text-align: center;
 .popup .popuptext {
 visibility: hidden;
 width: 160px;
-background-color: #31669F;
+background-color: #5174aa;
 color: #F0F8FF;
 text-align: center;
 border-radius: 6px;
@@ -500,7 +500,7 @@ left: 50%;
 margin-left: -5px;
 border-width: 5px;
 border-style: solid;
-border-color: #31669F transparent transparent transparent;
+border-color: #233c63 transparent transparent transparent;
 
 } */
 
