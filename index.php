@@ -418,7 +418,7 @@
 		font-style: italic;
 		font-size: 16px;
 	}
-	
+
 	.error{
 	    /* visibility: hidden; */
 	    width: 160px;
@@ -435,8 +435,8 @@
 		margin-top: -260px;
 	}
 
-	
-	
+
+
 	a#plus:link a#plus:visited{
 		font-weight: bold;
 		font-style: normal;
@@ -447,7 +447,7 @@
  	    display: inline-block;
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
-	
+
 	/* Popup container - can be anything you want */
 .popup {
 position: relative;
@@ -459,7 +459,7 @@ cursor: pointer;
 user-select: none;
 color: #533D61;
 background-color: rgba(0,0,0,0);
-background: rgba(0,0,0,0); 
+background: rgba(0,0,0,0);
 width: 16px;
 height: 16px;
 text-align: center;
@@ -467,7 +467,7 @@ text-align: center;
 
 .popup:hover{
 	color: #F0F8FF;
-	background-color: #533D61; 
+	background-color: #533D61;
 	width: 20px;
 	height: 20px;
 	text-align: center;
@@ -511,7 +511,7 @@ animation: fadeIn 1s;
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-from {opacity: 0;} 
+from {opacity: 0;}
 to {opacity: 1;}
 }
 
@@ -539,7 +539,7 @@ input#delete_btn{
 
 input#delete_btn:hover{
 	color: #F0F8FF;
-	background-color: #533D61; 
+	background-color: #533D61;
 	width: 20px;
 	height: 20px;
 	text-align: center;
@@ -553,7 +553,7 @@ form#deleteForm{
 	border-width: .1px;
 	/* border-collapse: none; */
 	display: inline;
-	
+
 }
 
 input#hidden{
@@ -563,7 +563,7 @@ input#hidden{
 	height: 0px;
 	display: none;
 }
-	
+
 	</style>
 
 
@@ -776,12 +776,12 @@ input#hidden{
 
 
 		}
-		
+
 		function checkOverflowMonth(day, month, addValue) {
 			d = parseInt(day);
 			m = parseInt(month);
 			add = parseInt(addValue);
-			
+
 			if (m == 2){
 				if (d + add > 28) {
 					return (d + add) % 28;
@@ -812,17 +812,17 @@ input#hidden{
 			day5 = "";
 			day6 = "";
 			otherEvents = "";
-			
+
 			var num_events = events.length;
 			for(var i = 0; i < events.length; i++){
 				var fulldate = " - " + "<span class='dateTime'>" + events[i].month + "/" + events[i].day + "/" + events[i].year + "</span>";
-				
+
 				//if month, day and year match today put in event0
 
 					//ORIGINAL CODE
 					// if(events[i].year == year){
 					// 	if(month == events[i].month){
-							
+
 							var check = false;
 							if (month == 12) {
 								var mod = 1;
@@ -830,14 +830,14 @@ input#hidden{
 							else {
 								var mod = 0;
 							}
-							
+
 							if(events[i].day == day) {
 								if(events[i].year == year){
 									if(month == events[i].month) {
 										check = true;
 										day0 += events[i].name+"<br>";
 										day0 += "<div class='dateTime'>";
-										
+
 										day0 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day0 += "AM";
@@ -859,7 +859,7 @@ input#hidden{
 										day0 += "<form id='deleteForm' method='POST' action='index.php'><input id='hidden' type='text' name='id' style='visibility: hidden;' value='" + events[i].id + "'/><input id='delete_btn' type='submit' value='&#10005;' name='delete_btn'/></form>";
 										day0 += "</div>";
 										day0 += "<br><br>";
-										
+
 									}
 									else if (events[i].month > month) {
 										check = true;
@@ -879,7 +879,7 @@ input#hidden{
 											check = true;
 											day1 += events[i].name+"<br>";
 											day1 += "<div class='dateTime'>";
-											
+
 											day1 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day1 += "AM";
@@ -919,7 +919,7 @@ input#hidden{
 										check = true;
 										day1 += events[i].name+"<br>";
 										day1 += "<div class='dateTime'>";
-										
+
 										day1 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day1 += "AM";
@@ -959,7 +959,7 @@ input#hidden{
 											check = true;
 											day2 += events[i].name+"<br>";
 											day2 += "<div class='dateTime'>";
-											
+
 											day2 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day2 += "AM";
@@ -999,7 +999,7 @@ input#hidden{
 										check = true;
 										day2 += events[i].name+"<br>";
 										day2 += "<div class='dateTime'>";
-										
+
 										day2 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day2 += "AM";
@@ -1039,7 +1039,7 @@ input#hidden{
 											check = true;
 											day3 += events[i].name+"<br>";
 											day3 += "<div class='dateTime'>";
-											
+
 											day3 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day3 += "AM";
@@ -1079,7 +1079,7 @@ input#hidden{
 										check = true;
 										day3 += events[i].name+"<br>";
 										day3 += "<div class='dateTime'>";
-										
+
 										day3 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day3 += "AM";
@@ -1119,7 +1119,7 @@ input#hidden{
 											check = true;
 											day4 += events[i].name+"<br>";
 											day4 += "<div class='dateTime'>";
-											
+
 											day4 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day4 += "AM";
@@ -1159,7 +1159,7 @@ input#hidden{
 										check = true;
 										day4 += events[i].name+"<br>";
 										day4 += "<div class='dateTime'>";
-										
+
 										day4 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day4 += "AM";
@@ -1199,7 +1199,7 @@ input#hidden{
 											check = true;
 											day5 += events[i].name+"<br>";
 											day5 += "<div class='dateTime'>";
-											
+
 											day5 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day5 += "AM";
@@ -1239,7 +1239,7 @@ input#hidden{
 										check = true;
 										day5 += events[i].name+"<br>";
 										day5 += "<div class='dateTime'>";
-										
+
 										day5 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day5 += "AM";
@@ -1279,7 +1279,7 @@ input#hidden{
 											check = true;
 											day6 += events[i].name+"<br>";
 											day6 += "<div class='dateTime'>";
-											
+
 											day6 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 											if(events[i].start_am_or_pm==1){
 												day6 += "AM";
@@ -1319,7 +1319,7 @@ input#hidden{
 										check = true;
 										day6 += events[i].name+"<br>";
 										day6 += "<div class='dateTime'>";
-										
+
 										day6 += events[i].timeStartHour+":"+events[i].timeStartMinute;
 										if(events[i].start_am_or_pm==1){
 											day6 += "AM";
@@ -1366,7 +1366,7 @@ input#hidden{
 							}
 					}
 					//later year
-					
+
 			document.getElementById("event0").innerHTML = day0;
 			document.getElementById("event1").innerHTML = day1;
 			document.getElementById("event2").innerHTML = day2;
@@ -1378,7 +1378,7 @@ input#hidden{
 
 
 		}
-		
+
 		function seeMore(i){
 			console.log("hello");
 			var popup = document.getElementById("myPopup"+i);
@@ -1477,7 +1477,7 @@ input#hidden{
 		<span id="user"><?php echo $_SESSION['user']['username']; ?></span>
 
 		<small>
-			<a href="index.php?logout='1'" >Sign Out</a>
+			<a href="sign_in.php" >Sign Out</a>
 		</small>
 
 	<?php endif ?>

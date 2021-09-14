@@ -153,15 +153,13 @@ a:hover, a:active {
     <div class="lef" >
     Calm & Collected Calendar
     </div>
-    <div>
-    Welcome to the best way to keep organized!<br>
-    The Calm & Collected Calendar is a simple way to list out all your weekly to-do's <br>
-    Sign in to get started!
-    <div>
+    <h2 style="color:#332622; font-weight:400; text-align:center">
+      Welcome to the best way to keep organized!<br>
+    The Calm & Collected Calendar is a simple way to list out all your weekly to-do's. <br>
+  </h2>
 <div class="login-form">
     <form method="post" action="sign_in.php">
-        <h2>Log in</h2>
-        <p>Welcome!</p>
+        <h2>Log In</h2>
         <hr>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" name="username">
@@ -174,7 +172,8 @@ a:hover, a:active {
             <input type="submit" class="btn btn-primary btn-block" value="Sign In" name="login_btn"/>
         </div>
     </form>
-    <p class="text-center"><a href="sign_up.php">Create an Account</a></p>
+    <p style="text-align:center; color:#332622; "> Don't have an account? Create one below! </p>
+    <p class="text-center"><a href="sign_up.php">Sign Up</a></p>
 </div>
 </body>
 </html>
