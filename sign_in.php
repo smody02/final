@@ -153,7 +153,11 @@ a:hover, a:active {
     <div class="lef" >
     Calm & Collected Calendar
     </div>
-
+    <div>
+    Welcome to the best way to keep organized!<br>
+    The Calm & Collected Calendar is a simple way to list out all your weekly to-do's <br>
+    Sign in to get started!
+    <div>
 <div class="login-form">
     <form method="post" action="sign_in.php">
         <h2>Log in</h2>
