@@ -7,7 +7,7 @@
 <title>C&C Calendar Sign In</title>
 <style>
 
-body {
+body { 
   background-image: url('background1.jpg');
   background-attachment: fixed;
   background-size: 100%;
