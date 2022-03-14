@@ -2,10 +2,10 @@
 session_start();
 
 //Initialize connection info
-$server = "sql210.epizy.com";
-$userid = "epiz_27849968";
-$pw = "YSGfvMca1fq9n";
-$db= "epiz_27849968_ccc";
+$server = "sql300.epizy.com";
+$userid = "epiz_31290376";
+$pw = "CjAAZpSCLKP5iD";
+$db= "epiz_31290376_ccc";
 
 // $username = "";
 // $password = "";
